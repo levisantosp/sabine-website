@@ -1,0 +1,20 @@
+{
+  "header": {
+    "commands": "Comandos",
+    "home": "Página principal",
+    "support": "Servidor de comunidade e suporte"
+  },
+  "home": {
+    "title": "Seu bot de <strong>e-sports</strong> para Discord",
+    "desc": {
+      "1": "Mais que apenas um bot, sou sua fonte de informação e entretenimento em primeira mão para o seu servidor no Discord!",
+      "2": "Agende jogos de vários campeonatos",
+      "3": "Fique por dentro de resultados e estatísticas",
+      "4": "Faça palpites",
+      "5": "Dispute com os melhores jogadores"
+    }
+  },
+    "commands": {
+    "title": "Comandos do bot"
+  }
+}
