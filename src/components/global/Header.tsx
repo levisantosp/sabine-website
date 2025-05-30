@@ -38,9 +38,9 @@ export default function Header({ children }: { children?: React.ReactNode }) {
             <li className="transition duration-500 hover:scale-115">
               <div>
                 <a
-                href="https://discord.com/invite/FaqYcpA84r"
-                target="_blank"
-                className="flex gap-2 items-center px-4 py-2 bg-[#0d763e] text-white rounded-md hover:bg-[#11924b] transition"
+                  href="https://discord.com/invite/FaqYcpA84r"
+                  target="_blank"
+                  className="flex gap-2 items-center px-4 py-2 bg-[#0d763e] text-white rounded-md hover:bg-[#11924b] transition"
                 >
                   <span>Support and community server</span>
                   <Image
