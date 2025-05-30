@@ -1,18 +1,26 @@
+import { createTranslator } from "next-intl"
+import { getMessages } from "next-intl/server"
 import Image from "next/image"
+import { Props } from "./layout"
 
-export default function Home() {
+export default async function Home({ locale }: Props) {
+  const messages = await getMessages()
+  const t = createTranslator({ locale, messages })
+
   return (
     <>
-      <div className="px-30 pt-15 flex items-start gap-10">
+      <div className="px-30 pt-15 flex items-start gap-15">
         <div>
-          <h1 className="text-7xl max-w-md">
-            Your <span className="text-[#3442b8]">e-sports</span> Discord bot
+          <h1 className="text-6xl max-w-md">
+            {t.rich("home.title", {
+              strong: (chunks) => <span className="text-[#3442b8]">{chunks}</span>
+            })}
           </h1>
 
           <p
             className="text-3xl max-w-lg pt-10 text-[#9CA3AF]"
           >
-            More than just a bot, I&apos;m your source of first-hand information and entertainment for your Discord server!
+            {t("home.desc.1")}
           </p>
 
           <ul className="text-3xl pt-10 flex flex-col gap-y-4 text-[#9CA3AF]">
@@ -24,7 +32,7 @@ export default function Home() {
                 alt="calendar"
               />
 
-              <span>Schedule matches from various leagues</span>
+              <span>{t("home.desc.2")}</span>
             </li>
             <li className="flex gap-4">
               <Image
@@ -34,7 +42,7 @@ export default function Home() {
                 alt="target"
               />
 
-              <span>Stay up to date with results and statistics</span>
+              <span>{t("home.desc.3")}</span>
             </li>
             <li className="flex gap-4">
               <Image
@@ -44,7 +52,7 @@ export default function Home() {
                 alt="light"
               />
 
-              <span>Make predictions</span>
+              <span>{t("home.desc.4")}</span>
             </li>
             <li className="flex gap-4">
               <Image
@@ -54,7 +62,7 @@ export default function Home() {
                 alt="medal"
               />
 
-              <span>Compete against the best players</span>
+              <span>{t("home.desc.5")}</span>
             </li>
           </ul>
         </div>
