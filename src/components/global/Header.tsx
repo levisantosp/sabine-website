@@ -1,22 +1,29 @@
 import local from "next/font/local"
 import Link from "next/link"
 import Image from "next/image"
+import { createTranslator, NextIntlClientProvider } from "next-intl"
+import { getMessages } from "next-intl/server"
+import LanguageMenu from "./LanguageMenu"
+import { Props } from "@/app/[locale]/layout"
 
 const lubrifont = local({
-  src: "../../app/fonts/WDXLLubrifontTC-Regular.ttf",
+  src: "../../app/[locale]/fonts/WDXLLubrifontTC-Regular.ttf",
   display: "swap"
 })
 
-export default function Header({ children }: { children?: React.ReactNode }) {
+export default async function Header({ children, locale }: Props) {
+  const messages = await getMessages()
+  const t = createTranslator({ locale, messages })
+
   return (
     <>
       <header className="bg-[#0d763e] shadow-xl">
-        <nav className="p-4 flex items-center justify-between">
+        <nav className="p-1 flex items-center justify-between">
           <div className="transition duration-500 hover:scale-115">
-            <Link href="/" className="flex flex-wrap items-center justify-between px-30">
+            <Link href="/" className="flex flex-wrap items-center justify-between px-30 py-1">
               <Image
                 src="/sabine.png"
-                width={80}
+                width={60}
                 height={1024}
                 alt="sabine"
                 className="rounded-full"
@@ -28,11 +35,11 @@ export default function Header({ children }: { children?: React.ReactNode }) {
 
           <ul className="flex flex-wrap items-center justify-between gap-5 text-3xl px-25">
             <li className="transition duration-500 hover:scale-115">
-              <Link href="/" className="inline-block px-4 py-2 bg-[#0d763e] text-white rounded-md hover:bg-[#11924b] transition">Home</Link>
+              <Link href="/" className="inline-block px-4 py-2 bg-[#0d763e] text-white rounded-md hover:bg-[#11924b] transition">{t("header.home")}</Link>
             </li>
 
             <li className="transition duration-500 hover:scale-115">
-              <Link href="/commands" className="inline-block px-4 py-2 bg-[#0d763e] text-white rounded-md hover:bg-[#11924b] transition">Commands</Link>
+              <Link href="/commands" className="inline-block px-4 py-2 bg-[#0d763e] text-white rounded-md hover:bg-[#11924b] transition">{t("header.commands")}</Link>
             </li>
 
             <li className="transition duration-500 hover:scale-115">
@@ -42,7 +49,7 @@ export default function Header({ children }: { children?: React.ReactNode }) {
                   target="_blank"
                   className="flex gap-2 items-center px-4 py-2 bg-[#0d763e] text-white rounded-md hover:bg-[#11924b] transition"
                 >
-                  <span>Support and community server</span>
+                  <span>{t("header.support")}</span>
                   <Image
                     src="/redirect.png"
                     width={30}
@@ -55,15 +62,19 @@ export default function Header({ children }: { children?: React.ReactNode }) {
             </li>
 
             <li>
-              {/* change lang option here */}
+              <LanguageMenu/>
             </li>
           </ul>
         </nav>
       </header>
 
-      <html lang="en">
+      <html lang={locale}>
         <body className={lubrifont.className}>
-          {children}
+          <NextIntlClientProvider
+            messages={messages}
+          >
+            {children}
+          </NextIntlClientProvider>
         </body>
       </html>
     </>
