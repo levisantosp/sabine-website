@@ -12,7 +12,7 @@ export default function Home() {
           <p
             className="text-3xl max-w-lg pt-10 text-[#9CA3AF]"
           >
-            More than just a bot, I'm your source of first-hand information and entertainment for your Discord server!
+            More than just a bot, I&apos;m your source of first-hand information and entertainment for your Discord server!
           </p>
 
           <ul className="text-3xl pt-10 flex flex-col gap-y-4 text-[#9CA3AF]">
