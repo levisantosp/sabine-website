@@ -1,12 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-type Props = {
-  params: Promise<{
-    locale: string
-  }>
-}
-
-export default async function Commands({ params }: Props) {
+export default async function Commands() {
   const t = await getTranslations()
 
   // const commands = await (await fetch("localhost:4000/commands", {
