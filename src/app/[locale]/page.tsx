@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server"
 import Image from "next/image"
+import Link from "next/link"
 
 export default async function Home() {
   const t = await getTranslations()
@@ -19,6 +20,24 @@ export default async function Home() {
           >
             {t("home.desc.1")}
           </p>
+
+          <Link
+            href="https://discord.com/oauth2/authorize?client_id=1235576817683922954&scope=bot&permissions=388096"
+            target="_blank"
+            className="flex items-center justify-center text-4xl bg-[#3442b8] rounded-md gap-3 mt-5 w-fit px-6 py-2 transition duration-500 hover:scale-115"
+          >
+            <span>
+              {t("home.add")}
+            </span>
+
+            <Image
+              src="/redirect.png"
+              width={35}
+              height={50}
+              alt="plus"
+              className="invert"
+            />
+          </Link>
 
           <ul className="text-3xl pt-10 flex flex-col gap-y-4 text-[#9CA3AF]">
             <li className="flex gap-4">
