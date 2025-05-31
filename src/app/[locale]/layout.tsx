@@ -10,9 +10,11 @@ export const metadata: Metadata = {
   description: "More than just a bot, I'm your source of first-hand information and entertainment for your Discord server!\n\n🏆 Schedule matches from various leagues\n🎯 Stay up to date with results and statistics\n💡 Make predictions\n🥇 Compete against the best players"
 }
 
-export type Props = {
+type Props = {
   children?: React.ReactNode,
-  locale: string
+  params: Promise<{
+    locale: string
+  }>
 }
 
 const lubrifont = localFont({
@@ -22,22 +24,23 @@ const lubrifont = localFont({
 
 export default async function RootLayout({
   children,
-  locale
+  params
 }: Props) {
   const messages = await getMessages()
+  const { locale } = await params
 
   return (
-    <>
-      <Header locale={locale} />
-      <html lang={locale}>
-        <body className={lubrifont.className}>
-          <NextIntlClientProvider
-            messages={messages}
-          >
-            {children}
-          </NextIntlClientProvider>
-        </body>
-      </html>
-    </>
+    <html lang={locale}>
+      <body className={lubrifont.className}>
+        <Header params={params} />
+
+        <NextIntlClientProvider
+          messages={messages}
+          locale={locale}
+        >
+          {children}
+        </NextIntlClientProvider>
+      </body>
+    </html>
   )
 }

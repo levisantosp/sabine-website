@@ -1,23 +1,19 @@
-import { getMessages } from "next-intl/server"
-import { Props } from "../layout"
-import { createTranslator } from "next-intl"
+import { getTranslations } from "next-intl/server"
 
-export default async function Commands({ locale }: Props) {
-  const messages = await getMessages()
-  const t = createTranslator({ locale, messages })
+type Props = {
+  params: Promise<{
+    locale: string
+  }>
+}
+
+export default async function Commands({ params }: Props) {
+  const t = await getTranslations()
 
   // const commands = await (await fetch("localhost:4000/commands", {
   //   headers: {
   //     authorization: process.env.AUTH!
   //   }
   // })).json()
-
-  const commands = [
-    {
-      name: "help",
-      description: "Mostra os comandos do bot"
-    }
-  ]
 
   return (
     <>

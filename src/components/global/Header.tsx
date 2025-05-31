@@ -1,13 +1,16 @@
 import Link from "next/link"
 import Image from "next/image"
-import { createTranslator } from "next-intl"
-import { getMessages } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 import LanguageMenu from "./LanguageMenu"
-import { Props } from "@/app/[locale]/layout"
 
-export default async function Header({ locale }: Props) {
-  const messages = await getMessages()
-  const t = createTranslator({ locale, messages })
+type Props = {
+  params: Promise<{
+    locale: string
+  }>
+}
+
+export default async function Header({ params }: Props) {
+  const t = await getTranslations()
 
   return (
     <>

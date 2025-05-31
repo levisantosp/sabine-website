@@ -1,11 +1,8 @@
-import { createTranslator } from "next-intl"
-import { getMessages } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 import Image from "next/image"
-import { Props } from "./layout"
 
-export default async function Home({ locale }: Props) {
-  const messages = await getMessages()
-  const t = createTranslator({ locale, messages })
+export default async function Home() {
+  const t = await getTranslations()
 
   return (
     <>
