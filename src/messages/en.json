@@ -12,7 +12,8 @@
       "3": "Stay up to date with results and statistics",
       "4": "Make predictions",
       "5": "Compete against the best players"
-    }
+    },
+    "add": "Add me"
   },
   "commands": {
     "title": "Bot commands"
