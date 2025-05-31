@@ -1,6 +1,9 @@
 import type { Metadata } from "next"
 import Header from "@/components/global/Header"
 import "../globals.css"
+import localFont from "next/font/local"
+import { NextIntlClientProvider } from "next-intl"
+import { getMessages } from "next-intl/server"
 
 export const metadata: Metadata = {
   title: "Sabine | Your e-sports bot",
@@ -12,14 +15,29 @@ export type Props = {
   locale: string
 }
 
+const lubrifont = localFont({
+  src: "../../app/[locale]/fonts/WDXLLubrifontTC-Regular.ttf",
+  display: "swap"
+})
+
 export default async function RootLayout({
   children,
   locale
 }: Props) {
+  const messages = await getMessages()
+
   return (
     <>
-      <Header locale={locale}/>
-      {children}
+      <Header locale={locale} />
+      <html lang={locale}>
+        <body className={lubrifont.className}>
+          <NextIntlClientProvider
+            messages={messages}
+          >
+            {children}
+          </NextIntlClientProvider>
+        </body>
+      </html>
     </>
   )
 }

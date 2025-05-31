@@ -1,17 +1,11 @@
-import local from "next/font/local"
 import Link from "next/link"
 import Image from "next/image"
-import { createTranslator, NextIntlClientProvider } from "next-intl"
+import { createTranslator } from "next-intl"
 import { getMessages } from "next-intl/server"
 import LanguageMenu from "./LanguageMenu"
 import { Props } from "@/app/[locale]/layout"
 
-const lubrifont = local({
-  src: "../../app/[locale]/fonts/WDXLLubrifontTC-Regular.ttf",
-  display: "swap"
-})
-
-export default async function Header({ children, locale }: Props) {
+export default async function Header({ locale }: Props) {
   const messages = await getMessages()
   const t = createTranslator({ locale, messages })
 
@@ -67,16 +61,6 @@ export default async function Header({ children, locale }: Props) {
           </ul>
         </nav>
       </header>
-
-      <html lang={locale}>
-        <body className={lubrifont.className}>
-          <NextIntlClientProvider
-            messages={messages}
-          >
-            {children}
-          </NextIntlClientProvider>
-        </body>
-      </html>
     </>
   )
 }
