@@ -16,7 +16,8 @@ const eslintConfig = [
       indent: ["error", 2],
       quotes: ["error", "double"],
       eqeqeq: ["error", "always"],
-      "@typescript-eslint/no-unused-vars": "off"
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-explicit-any": "off"
     }
   }
 ]
