@@ -22,7 +22,7 @@ export default async function Home() {
           </p>
 
           <Link
-            href="https://discord.com/oauth2/authorize?client_id=1235576817683922954&scope=bot&permissions=388096"
+            href={process.env.INVITE!}
             target="_blank"
             className="flex items-center justify-center text-3xl md:text-4xl bg-[#3442b8] rounded-md gap-3 mt-5 w-fit px-6 py-2 transition duration-500 hover:scale-115"
           >
@@ -88,12 +88,74 @@ export default async function Home() {
         </div>
 
         <Image
-          src="/image.png"
+          src="/crowd.png"
           width={579}
           height={369}
           alt="image"
-          className="relative md:top-20 md:left-40 mx-auto mt-8 rounded-xl shadow-xl filter brightness-90 transition-transform duration-500 hover:scale-125 hover:brightness-110 hover:-translate-y-1"
+          className="relative md:top-20 md:left-20 mx-auto mt-8 rounded-xl shadow-xl filter brightness-90 transition-transform duration-500 hover:scale-125 hover:brightness-110 hover:-translate-y-1"
         />
+      </div>
+
+      <div className="px-4 md:px-30 pt-8 md:pt-10 md:max-w-7xl pb-10">
+        <ul className="flex flex-col gap-y-10">
+          <li className="flex flex-col md:flex-row bg-[#2A2A2A] max-w-90 md:max-w-3xl rounded-md px-4 py-4 transition-transform duration-500 hover:scale-115 hover:brightness-110 hover:-translate-y-1">
+            <Image
+              src="/illustration-2.png"
+              width={366}
+              height={240}
+              alt="a"
+              className="rounded-md shadow-xl transition-transform duration-500 hover:scale-105 hover:brightness-110 hover:-translate-y-1"
+            />
+
+            <div className="flex flex-col">
+              <h2 className="md:text-3xl font-bold text-center pt-1">
+                {t("home.setup.title")}
+              </h2>
+
+              <p
+                className="md:text-xl px-4 pt-5"
+                style={
+                  {
+                    whiteSpace: "pre-line"
+                  }
+                }
+              >
+                {t.rich("home.setup.desc", {
+                  strong: (chunks) => <span className="font-bold bg-[#1A1A1A] text-[#9CA3AF] rounded-md md:max-w-30">{chunks}</span>
+                })}
+              </p>
+            </div>
+          </li>
+
+          <li className="flex flex-col md:flex-row bg-[#2A2A2A] max-w-90 md:max-w-3xl rounded-md px-4 py-4 transition-transform duration-500 hover:scale-115 hover:brightness-110 hover:-translate-y-1">
+            <Image
+              src="https://i.imgur.com/YoOt0PW.gif"
+              width={366}
+              height={533}
+              alt="a"
+              className="rounded-md shadow-xl transition-transform duration-500 hover:scale-105 hover:brightness-110 hover:-translate-y-1"
+            />
+
+            <div className="flex flex-col">
+              <h2 className="md:text-3xl font-bold text-center pt-1">
+                {t("home.use.title")}
+              </h2>
+
+              <p
+                className="md:text-xl px-4 pt-5"
+                style={
+                  {
+                    whiteSpace: "pre-line"
+                  }
+                }
+              >
+                {t.rich("home.use.desc", {
+                  strong: (chunks) => <span className="font-bold bg-[#1A1A1A] text-[#9CA3AF] rounded-md md:max-w-30">{chunks}</span>
+                })}
+              </p>
+            </div>
+          </li>
+        </ul>
       </div>
     </>
   )
