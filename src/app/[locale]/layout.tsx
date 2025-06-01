@@ -3,12 +3,18 @@ import Header from "@/components/global/Header"
 import "../globals.css"
 import localFont from "next/font/local"
 import { NextIntlClientProvider } from "next-intl"
-import { getMessages } from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 import Footer from "@/components/global/Footer"
 
-export const metadata: Metadata = {
-  title: "Sabine | Your e-sports bot",
-  description: "More than just a bot, I'm your source of first-hand information and entertainment for your Discord server!\n\n🏆 Schedule matches from various leagues\n🎯 Stay up to date with results and statistics\n💡 Make predictions\n🥇 Compete against the best players"
+export const generateMetadata = async({ params }: Props) => {
+  const { locale } = await params
+  const t = await getTranslations({ locale })
+
+  return {
+    title: t("metadata.title"),
+    description: t("metadata.desc"),
+    icons: "https://cdn.discordapp.com/avatars/1235576817683922954/5acde2d51b24f843dc1619260e80c583.png?size=2048"
+  }
 }
 
 type Props = {

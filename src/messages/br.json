@@ -31,5 +31,9 @@
     "get_support": "Obter suporte",
     "commands": "Lista de comandos",
     "get_premium": "Obter premium"
+  },
+    "metadata": {
+    "title": "Sabine | Seu bot de e-sports",
+    "desc": "Mais que apenas um bot, sou sua fonte de informação e entretenimento em primeira mão para o seu servidor no Discord!!\n\n🏆 Agende jogos de vários campeonatos\n🎯 Fique por dentro de resultados e estatísticas\n💡 Faça palpites\n🥇 Dispute com os melhores jogadores"
   }
 }
