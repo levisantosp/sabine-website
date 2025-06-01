@@ -28,7 +28,7 @@ export default function LanguageMenu() {
           width={50}
           height={50}
           alt="language"
-          className="invert cursor-pointer w-10 h-10"
+          className="invert cursor-pointer w-6 h-6 md:w-10 md:h-10"
         />
 
         <Transition
@@ -44,7 +44,7 @@ export default function LanguageMenu() {
             className="absolute top-12 right-0 bg-[#3442b8] rounded-md shadow-md w-50 z-20"
           >
             <ul>
-              <li 
+              <li
                 className="flex items-center px-4 py-2 cursor-pointer gap-4 hover:bg-[#4f5cdb] transition"
                 onClick={() => changeLanguage("br")}
               >
