@@ -13,9 +13,23 @@
       "4": "Make predictions",
       "5": "Compete against the best players"
     },
-    "add": "Add me"
+    "add": "Add me",
+    "setup": {
+      "title": "Easy to Setup",
+      "desc": "Setting up the bot is too easy. Just run the command <strong>/tournament add</strong>, select which game you want and select the channels.\n\nIf need help, join our support server!"
+    },
+    "use": {
+      "title": "Easy to Use",
+      "desc": "Using the bot is also very easy. Just click on the \"Predict\"  button to make a prediction and put the score that you want to predict for the match.\n\nIf need help, join our support server!"
+    }
   },
   "commands": {
     "title": "Bot commands"
+  },
+  "footer": {
+    "add_bot": "Add bot",
+    "get_support": "Get support",
+    "commands": "Commands list",
+    "get_premium": "Get premium"
   }
 }

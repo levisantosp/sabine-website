@@ -13,9 +13,23 @@
       "4": "Faça palpites",
       "5": "Dispute com os melhores jogadores"
     },
-    "add": "Me adicione"
+    "add": "Me adicione",
+    "setup": {
+      "title": "Fácil de Configurar",
+      "desc": "Configurar o bot é muito fácil. Basta rodar o comando <strong>/tournament add</strong> e selecionar o jogo e os canais que você quer.\n\nSe precisar de ajuda, entre nosso servidor de suporte!"
+    },
+    "use": {
+      "title": "Fácil de Usar",
+      "desc": "Usar o bot também é muito fácil. Basta clicar no botão \"Palpitar\" para fazer um palpite e colocar o placar que você quer palpitar para a partida.\n\nSe precisar de ajuda, entre nosso servidor de suporte!"
+    }
   },
-    "commands": {
+  "commands": {
     "title": "Comandos do bot"
+  },
+  "footer": {
+    "add_bot": "Adicionar bot",
+    "get_support": "Obter suporte",
+    "commands": "Lista de comandos",
+    "get_premium": "Obter premium"
   }
 }
