@@ -16,7 +16,7 @@ export default async function Header({ params }: Props) {
     <>
       <header className="bg-[#0d763e] shadow-xl p-2 md:px-10">
         <div className="flex flex-wrap items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 sm:gap-4">
+          <Link href="/" className="flex items-center gap-3 sm:gap-4 transition duration-300 hover:scale-105">
             <Image
               src="/sabine.png"
               width={50}
