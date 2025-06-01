@@ -4,6 +4,7 @@ import "../globals.css"
 import localFont from "next/font/local"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages } from "next-intl/server"
+import Footer from "@/components/global/Footer"
 
 export const metadata: Metadata = {
   title: "Sabine | Your e-sports bot",
@@ -40,6 +41,8 @@ export default async function RootLayout({
         >
           {children}
         </NextIntlClientProvider>
+
+        <Footer/>
       </body>
     </html>
   )
