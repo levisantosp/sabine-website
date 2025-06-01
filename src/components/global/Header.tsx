@@ -30,8 +30,18 @@ export default async function Header({ params }: Props) {
           <ul className="flex flex-wrap items-center justify-end gap-4 sm:gap-6 md:gap-10 text-sm sm:text-xl md:text-3xl mt-2 sm:mt-0">
             <li className="transition duration-300 hover:scale-105">
               <Link
+                href="https://discord.com/oauth2/authorize?client_id=1235576817683922954&scope=bot&permissions=388096"
+                className="inline-block py-1 sm:py-2 px-2 sm:px-4 bg-[#3442b8] rounded-md"
+                target="_blank"
+              >
+                {t("home.add")}
+              </Link>
+            </li>
+
+            <li className="transition duration-300 hover:scale-105">
+              <Link
                 href="/"
-                className="inline-block py-1 sm:py-2 px-2 sm:px-4 bg-[#0d763e] text-white rounded-md hover:bg-[#11924b] transition"
+                className="inline-block py-1 sm:py-2 px-2 sm:px-4 bg-[#0d763e] rounded-md hover:bg-[#11924b] transition"
               >
                 {t("header.home")}
               </Link>
