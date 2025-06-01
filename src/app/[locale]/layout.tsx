@@ -10,13 +10,6 @@ export const metadata: Metadata = {
   description: "More than just a bot, I'm your source of first-hand information and entertainment for your Discord server!\n\n🏆 Schedule matches from various leagues\n🎯 Stay up to date with results and statistics\n💡 Make predictions\n🥇 Compete against the best players"
 }
 
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 1,
-  userScalable: false
-}
-
 type Props = {
   children?: React.ReactNode,
   params: Promise<{
