@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Transition } from "@headlessui/react"
 import { usePathname, useRouter } from "next/navigation"
 import { locales } from "../../../config"
+import { Languages } from "lucide-react"
 
 export default function LanguageMenu() {
   const [isOpen, setIsOpen] = useState(false)
@@ -23,12 +24,8 @@ export default function LanguageMenu() {
         onMouseLeave={() => setIsOpen(false)}
         className="relative inline-block"
       >
-        <Image
-          src="/header/language.png"
-          width={50}
-          height={50}
-          alt="language"
-          className="invert cursor-pointer w-6 h-6 md:w-10 md:h-10"
+        <Languages
+          className="cursor-pointer"
         />
 
         <Transition
