@@ -42,7 +42,7 @@ export default async function Home() {
           <ul className="text-xl md:text-3xl pt-10 flex flex-col gap-y-4 text-[#9CA3AF] max-w-xs md:max-w-full">
             <li className="flex gap-4">
               <Image
-                src="/calendar.png"
+                src="/home/calendar.png"
                 width={30}
                 height={50}
                 alt="calendar"
@@ -53,7 +53,7 @@ export default async function Home() {
             </li>
             <li className="flex gap-4">
               <Image
-                src="/target.png"
+                src="/home/target.png"
                 width={30}
                 height={50}
                 alt="target"
@@ -64,7 +64,7 @@ export default async function Home() {
             </li>
             <li className="flex gap-4">
               <Image
-                src="/light.png"
+                src="/home/light.png"
                 width={30}
                 height={50}
                 alt="light"
@@ -75,7 +75,7 @@ export default async function Home() {
             </li>
             <li className="flex gap-4">
               <Image
-                src="/medal.png"
+                src="/home/medal.png"
                 width={30}
                 height={50}
                 alt="medal"
@@ -88,7 +88,7 @@ export default async function Home() {
         </div>
 
         <Image
-          src="/crowd.png"
+          src="/home/crowd.png"
           width={579}
           height={369}
           alt="image"
@@ -100,7 +100,7 @@ export default async function Home() {
         <ul className="flex flex-col gap-y-10">
           <li className="flex flex-col md:flex-row bg-[#2A2A2A] max-w-90 md:max-w-3xl rounded-md px-4 py-4 transition-transform duration-500 hover:scale-115 hover:brightness-110 hover:-translate-y-1">
             <Image
-              src="/illustration-2.png"
+              src="/home/illustration-2.png"
               width={366}
               height={240}
               alt="a"

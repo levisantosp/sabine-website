@@ -24,7 +24,7 @@ export default function LanguageMenu() {
         className="relative inline-block"
       >
         <Image
-          src="/language.png"
+          src="/header/language.png"
           width={50}
           height={50}
           alt="language"
@@ -59,7 +59,7 @@ export default function LanguageMenu() {
 
               <li
                 className="flex items-center px-4 py-2 cursor-pointer gap-4 hover:bg-[#4f5cdb] transition"
-                onClick={() => changeLanguage("en")}
+                onClick={() => changeLanguage("us")}
               >
                 <Image
                   src="/us.png"
