@@ -1,4 +1,3 @@
-import type { Metadata, Viewport } from "next"
 import Header from "@/components/global/Header"
 import "../globals.css"
 import localFont from "next/font/local"
