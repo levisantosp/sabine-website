@@ -49,7 +49,7 @@ export default function LanguageMenu() {
                 onClick={() => changeLanguage("br")}
               >
                 <Image
-                  src="/br.png"
+                  src="/header/br.png"
                   width={40}
                   height={72}
                   alt="br"
@@ -62,7 +62,7 @@ export default function LanguageMenu() {
                 onClick={() => changeLanguage("us")}
               >
                 <Image
-                  src="/us.png"
+                  src="/header/us.png"
                   width={40}
                   height={72}
                   alt="us"
