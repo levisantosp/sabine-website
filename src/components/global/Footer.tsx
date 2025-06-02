@@ -6,14 +6,8 @@ export default async function Footer() {
 
   return (
     <>
-      <footer className="flex md:gap-40 bg-[#0d763e] shadow-xl p-2 md:px-10 h-32 md:h-40">
-        {/* 
-          - adicione o bot
-          - obter suporte
-          - comandos
-          - premium
-        */}
-        <ul className="flex flex-col gap-y-7 text-2xl px-2 md:px-20 pt-3 md:pt-7">
+      <footer className="flex gap-9 md:gap-40 bg-[#0d763e] shadow-xl p-2 md:px-10 h-32 md:h-40">
+        <ul className="flex flex-col gap-y-7 text-lg md:text-2xl px-2 md:px-20 pt-3 md:pt-7">
           <li>
             <Link
               href={process.env.INVITE!}
@@ -37,7 +31,7 @@ export default async function Footer() {
           </li>
         </ul>
 
-        <ul className="flex flex-col gap-y-7 text-2xl px-10 md:px-20 pt-3 md:pt-7">
+        <ul className="flex flex-col gap-y-7 text-lg md:text-2xl px-10 md:px-20 pt-3 md:pt-7">
           <li>
             <Link
               href="/commands"
