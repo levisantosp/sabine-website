@@ -12,7 +12,7 @@ export default async function Commands() {
   return (
     <>
       <div>
-        <h1 className="flex flex-col text-4xl md:text-7xl items-center pt-15">
+        <h1 className="flex flex-col text-4xl md:text-7xl items-center pt-1">
           {t("commands.title")}
         </h1>
       </div>
