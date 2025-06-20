@@ -24,7 +24,79 @@
     }
   },
   "commands": {
-    "title": "Comandos do bot"
+    "title": "Comandos do bot",
+    "admin": {
+      "description": "Veja o painel de controle e altere o idioma do bot"
+    },
+    "activatekey": {
+      "description": "Ative sua chave premium em algum servidor"
+    },
+    "career": {
+      "description": "Veja sua carreira"
+    },
+    "claim": {
+      "description": "Obtenha um jogador aleatório"
+    },
+    "coins": {
+      "description": "Veja seus coins"
+    },
+    "daily": {
+      "description": "Pegue sua recompensa diária"
+    },
+    "duel": {
+      "description": "Inicie um duelo com alguém"
+    },
+    "help": {
+      "description": "Lista de comandos"
+    },
+    "info": {
+      "description": "Mostra algumas informações do bot"
+    },
+    "language": {
+      "description": "Altera o idioma que eu interajo com você, sobrepondo o idioma definido no servidor"
+    },
+    "live": {
+      "description": "Habilita e desabilita a funcionalidade de acompanhar partidas ao vivo"
+    },
+    "news": {
+      "description": "Habilita e desabilita a funcionalidade de notícias"
+    },
+    "ping": {
+      "description": "Veja o ping do bot"
+    },
+    "player": {
+      "description": "Veja informações sobre determinado jogador"
+    },
+    "predictions": {
+      "description": "Veja seus palpites"
+    },
+    "premium": {
+      "description": "Veja informações sobre o seu plano premium"
+    },
+    "promote": {
+      "description": "Promova um jogador para o time titular"
+    },
+    "ranking": {
+      "description": "Veja o ranking de palpites"
+    },
+    "remove": {
+      "description": "Remova um jogador do time titular"
+    },
+    "roster": {
+      "description": "Veja informações do seu elenco"
+    },
+    "sell": {
+      "description": "Venda um jogador"
+    },
+    "sign": {
+      "description": "Contrate um jogador"
+    },
+    "team": {
+      "description": "Veja informações sobre determinada equipe"
+    },
+    "tournament": {
+      "description": "Adicione e remova torneios"
+    }
   },
   "footer": {
     "add_bot": "Adicionar bot",
@@ -35,5 +107,6 @@
     "metadata": {
     "title": "Sabine | Seu bot de e-sports",
     "desc": "Mais que apenas um bot, sou sua fonte de informação e entretenimento em primeira mão para o seu servidor no Discord!!\n\n🏆 Agende jogos de vários campeonatos\n🎯 Fique por dentro de resultados e estatísticas\n💡 Faça palpites\n🥇 Dispute com os melhores jogadores"
-  }
+  },
+  "note": "Nota: "
 }

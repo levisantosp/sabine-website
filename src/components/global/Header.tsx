@@ -6,7 +6,8 @@ import {
   LogIn,
   House,
   Bot,
-  CircleHelp
+  CircleHelp,
+  BookCheck
 } from "lucide-react"
 import MobileMenuWrapper from "./MobileMenuWrapper"
 
@@ -69,6 +70,16 @@ export default async function Header({ params }: Props) {
                   <Bot />
                   {t("header.commands")}
                 </div>
+              </Link>
+            </li>
+
+            <li className="transition duration-300 hover:scale-105">
+              <Link
+                href="/wiki"
+                className="flex items-center gap-2 py-1 sm:py-2 px-2 sm:px-4 bg-[#0d763e] text-white rounded-md hover:bg-[#11924b] transition"
+              >
+                <BookCheck />
+                <span>Wiki</span>
               </Link>
             </li>
 

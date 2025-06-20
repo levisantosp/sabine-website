@@ -24,7 +24,79 @@
     }
   },
   "commands": {
-    "title": "Bot commands"
+    "title": "Bot commands",
+    "admin": {
+      "description": "See the dashboard and change the bot language"
+    },
+    "activatekey": {
+      "description": "Activate your premium key on a server"
+    },
+    "career": {
+      "description": "See your career"
+    },
+    "claim": {
+      "description": "Claim a random player"
+    },
+    "coins": {
+      "description": "See your coins"
+    },
+    "daily": {
+      "description": "Get your daily reward"
+    },
+    "duel": {
+      "description": "Start a duel with someone"
+    },
+    "help": {
+      "description": "List of commands"
+    },
+    "info": {
+      "description": "Shows the bot informations"
+    },
+    "language": {
+      "description": "Change the language that I interact with you, overriding the language set on the server"
+    },
+    "live": {
+      "description": "Enable and disable the live feed feature"
+    },
+    "news": {
+      "description": "Enable and disable the news feature"
+    },
+    "ping": {
+      "description": "See the bot ping"
+    },
+    "player": {
+      "description": "See informations about a player"
+    },
+    "predictions": {
+      "description": "See your predictions"
+    },
+    "premium": {
+      "description": "See informations about your premium plan"
+    },
+    "promote": {
+      "description": "Promote a player to active roster"
+    },
+    "ranking": {
+      "description": "Veja o ranking de palpites"
+    },
+    "remove": {
+      "description": "Remove a player from active roster"
+    },
+    "roster": {
+      "description": "See your roster informations"
+    },
+    "sell": {
+      "description": "Sell a player"
+    },
+    "sign": {
+      "description": "Sign a player"
+    },
+    "team": {
+      "description": "See informations about a team"
+    },
+    "tournament": {
+      "description": "Add and remove tournaments"
+    }
   },
   "footer": {
     "add_bot": "Add bot",

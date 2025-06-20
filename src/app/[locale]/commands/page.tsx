@@ -21,7 +21,9 @@ export default async function Commands() {
         className="flex flex-col items-center justify-center pt-10"
       >
         {
-          commands.map((cmd: any, index: number) => (
+          commands
+          .sort((a: any, b: any) => a.name.localeCompare(b.name))
+          .map((cmd: any, index: number) => (
             <div
               key={index}
               className="bg-[#2A2A2A] p-5 rounded-md max-w-xs md:max-w-2xl mb-6 w-[700] transition duration-500 hover:scale-115"
@@ -32,9 +34,9 @@ export default async function Commands() {
                 /{cmd.name}
               </h2>
               <p
-                className="mt-2"
+                className="mt-2 text-xl"
               >
-                {cmd.description}
+                {t(`commands.${cmd.name}.description`)}
               </p>
             </div>
           ))

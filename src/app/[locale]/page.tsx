@@ -4,7 +4,6 @@ import Link from "next/link"
 
 export default async function Home() {
   const t = await getTranslations()
-
   return (
     <>
       <div className="px-4 md:px-30 pt-8 md:pt-15 flex flex-col md:flex-row items-start gap-8 md:gap-1">
