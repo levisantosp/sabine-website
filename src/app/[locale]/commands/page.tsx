@@ -22,24 +22,24 @@ export default async function Commands() {
       >
         {
           commands
-          .sort((a: any, b: any) => a.name.localeCompare(b.name))
-          .map((cmd: any, index: number) => (
-            <div
-              key={index}
-              className="bg-[#2A2A2A] p-5 rounded-md max-w-xs md:max-w-2xl mb-6 w-[700] transition duration-500 hover:scale-115"
-            >
-              <h2
-                className="text-3xl"
+            .sort((a: any, b: any) => a.name.localeCompare(b.name))
+            .map((cmd: any, index: number) => (
+              <div
+                key={index}
+                className="bg-[#2A2A2A] p-5 rounded-md max-w-xs md:max-w-2xl mb-6 w-[700] transition duration-500 hover:scale-115"
               >
-                /{cmd.name}
-              </h2>
-              <p
-                className="mt-2 text-xl"
-              >
-                {t(`commands.${cmd.name}.description`)}
-              </p>
-            </div>
-          ))
+                <h2
+                  className="text-3xl"
+                >
+                  /{cmd.name}
+                </h2>
+                <p
+                  className="mt-2 text-xl"
+                >
+                  {t(`commands.${cmd.name}.description`)}
+                </p>
+              </div>
+            ))
         }
       </div>
     </>
