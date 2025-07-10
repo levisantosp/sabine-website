@@ -5,7 +5,7 @@ import { Menu } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
-import LanguageMenu from './LanguageMenu'
+import MobileLanguageMenu from './MobileLanguageMenu'
 
 type Props = {
   add_me: string
@@ -19,7 +19,8 @@ export default function MobileMenu({ add_me, home, commands, support }: Props) {
     <>
       <div
         className='lg:hidden flex items-center justify-between'
-        onClick={() => isOpen ? setIsOpen(false) : setIsOpen(true)}
+        // onClick={() => isOpen ? setIsOpen(false) : setIsOpen(true)}
+        onClick={() => setIsOpen(true)}
       >
         <Link
           href='/'
@@ -97,7 +98,7 @@ export default function MobileMenu({ add_me, home, commands, support }: Props) {
                 </a>
               </li>
               <li>
-                <LanguageMenu />
+                <MobileLanguageMenu />
               </li>
             </ul>
           </div>
