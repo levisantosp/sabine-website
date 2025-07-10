@@ -45,12 +45,12 @@ export default async function Cards() {
                 {t('wiki.module.cards.calc.title')}
               </h1>
               <p
-              className='text-lg pt-3'
-              style={
-                {
-                  whiteSpace: 'pre-line'
+                className='text-lg pt-3'
+                style={
+                  {
+                    whiteSpace: 'pre-line'
+                  }
                 }
-              }
               >
                 {t.rich('wiki.module.cards.calc.description', {
                   strong: (chunks) => <span className='font-bold bg-[#1A1A1A] text-[#9CA3AF] rounded-md md:max-w-30'>{chunks}</span>
@@ -65,13 +65,13 @@ export default async function Cards() {
                 {t('wiki.module.cards.attributes.title')}
               </h1>
               <p
-              className='text-lg pt-3'
-              style={
-                {
-                  whiteSpace: 'pre-line'
+                className='text-lg pt-3'
+                style={
+                  {
+                    whiteSpace: 'pre-line'
+                  }
                 }
-              }
-              id='attributes'
+                id='attributes'
               >
                 {t.rich('wiki.module.cards.attributes.description', {
                   strong: (chunks) => <span className='font-bold bg-[#1A1A1A] text-[#9CA3AF] rounded-md md:max-w-30'>{chunks}</span>
