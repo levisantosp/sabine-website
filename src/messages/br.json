@@ -5,26 +5,30 @@
     "support": "Suporte"
   },
   "home": {
-    "title": "Seu bot de <strong>e-sports</strong> para Discord",
+    "title": "O Seu Simulador de <strong>VALORANT</strong> para Discord",
     "desc": {
-      "1": "Mais que apenas um bot, sou sua fonte de informação e entretenimento em primeira mão para o seu servidor no Discord!",
+      "1": "Imagine um universo onde a paixão pelo VALORANT ganha vida. Com a Sabine, você não apenas gerencia seu próprio time, mas também mergulha em partidas eletrizantes e constrói uma verdadeira dinastia de craques. Sinta o poder de transformar seu time em lenda!",
       "2": "Agende jogos de vários campeonatos",
       "3": "Fique por dentro de resultados e estatísticas",
       "4": "Faça palpites",
       "5": "Dispute com os melhores jogadores"
     },
     "add": "Me adicione",
-    "setup": {
-      "title": "Fácil de Configurar",
-      "desc": "Configurar o bot é muito fácil. Basta rodar o comando <strong>/tournament add</strong> e selecionar o jogo e os canais que você quer.\n\nSe precisar de ajuda, entre nosso servidor de suporte!"
+    "build": {
+      "title": "Monte seu Elenco",
+      "desc": "Montar o seu elenco é muito fácil. Basta rodar o comando <strong>/claim</strong> para obter um jogador aleatório, <strong>/promote</strong> para promovê-lo ao time titular e <strong>/roster</strong> para ver seu elenco.\n\nSe precisar de ajuda, entre nosso <a>servidor de suporte</a>!"
     },
-    "use": {
-      "title": "Fácil de Usar",
-      "desc": "Usar o bot também é muito fácil. Basta clicar no botão \"Palpitar\" para fazer um palpite e colocar o placar que você quer palpitar para a partida.\n\nSe precisar de ajuda, entre nosso servidor de suporte!"
+    "cards": {
+      "title": "Diversidade Gigante de Cards",
+      "desc": "São mais de {size} cards diferentes para você aproveitar e coletar com o comando <strong>/claim</strong> ou comprar com o comando <strong>/sign</strong>.\n\nSe precisar de ajuda, entre nosso <a>servidor de suporte</a>!"
+    },
+    "sign": {
+      "title": "Contrate Jogadores",
+      "desc": "Contrate jogadores por coins usando o comando <strong>/sign</strong> e monte seu elenco de forma prática e rápida, sem depender do drop rate do comando <strong>/claim</strong>.\n\nSe precisar de ajuda, entre nosso <a>servidor de suporte</a>!"
     }
   },
   "commands": {
-    "title": "Comandos do bot",
+    "title": "Comandos do Bot",
     "admin": {
       "description": "Veja o painel de controle e altere o idioma do bot"
     },
@@ -105,8 +109,69 @@
     "get_premium": "Obter premium"
   },
     "metadata": {
-    "title": "Sabine | Seu bot de e-sports",
-    "desc": "Mais que apenas um bot, sou sua fonte de informação e entretenimento em primeira mão para o seu servidor no Discord!!\n\n🏆 Agende jogos de vários campeonatos\n🎯 Fique por dentro de resultados e estatísticas\n💡 Faça palpites\n🥇 Dispute com os melhores jogadores"
+    "title": "Sabine | Seu simulador de VALORANT",
+    "desc": "Imagine um universo onde a paixão pelo VALORANT ganha vida. Com a Sabine, você não apenas gerencia seu próprio time, mas também mergulha em partidas eletrizantes e constrói uma verdadeira dinastia de craques. Sinta o poder de transformar seu time em lenda!\n\n🏆 Agende jogos de vários campeonatos\n🎯 Fique por dentro de resultados e estatísticas\n💡 Faça palpites\n🥇 Dispute com os melhores jogadores"
   },
-  "note": "Nota: "
+  "wiki": {
+    "title": "Selecione um Módulo",
+    "module": {
+      "predictions": {
+        "title": "Campeonatos, palpites e resultados",
+        "introduction": {
+          "title": "Introdução a Campeonatos, palpites e resultados",
+          "description": "Essa funcionalidade te permite acompanhar partidas de Valorant e League of Legends, fazer palpites, e ver os resultados."
+        },
+        "tournaments": {
+          "title": "Adicionando Campeonatos",
+          "description": "Para adicionar um campeonato de Valorant ou de League of Legends, você deve usar <strong>/tournament add</strong>, selecionar o jogo, selecionar o canal de partidas e selecionar o canal de resultados.\n\nÉ altamente recomendado que o canal de partidas seja um canal onde membros não possam enviar mensagens e que tenha somente o fluxo de mensagens da Sabine."
+        },
+        "predictions": {
+          "title": "Fazendo Palpites",
+          "description": "Para fazer um palpite, você deve ir ao canal de partidas e procurar pela mensagem da Sabine. Após isso, procure pelo botão <strong>Palpitar</strong> e faça seu palpite."
+        },
+        "bets": {
+          "title": "Fazendo Apostas",
+          "description": "Para fazer uma aposta, você deve ir ao canal de partidas e procurar pela mensagem da Sabine. Você deve ter ao menos 500 coins para fazer uma aposta. Após isso, procure pelo botão <strong>Apostar</strong> e faça sua aposta."
+        }
+      },
+      "simulator": {
+        "title": "Simulador",
+        "introduction": {
+          "title": "Introdução ao Simulador",
+          "description": "O simulador é uma experiência única. Monte seu elenco com jogadores de diferentes níveis e habilidades, duele contra outros jogadores, e prove que você tem o que é preciso para levar seu time ao topo. Toda decisão importa — a vitória depende do nível do seu time!"
+        },
+        "how_it_works": {
+          "title": "Como Funciona",
+          "description": "Cada partida no simulador é resolvida com base nas estatísticas dos seus jogadores e um pouco de sorte. Quanto mais forte for o seu time, maiores são as chances de vitória.\n\nPara duelar contra alguém, seu time deve ter 5 jogadores no elenco titular. Após isso, você pode usar <strong>/duel</strong> para duelar contra alguém."
+        },
+        "players": {
+          "title": "Jogadores",
+          "description": "Cada jogador tem um overall e <a>atributos</a> como mira, headshot, movimentação, agressividade, ACS, and noção de jogo. Você pode comprar e vender jogadores que não quer. Alguns jogadores são raros e performam melhor em situações de desvantagem.\n\nObtenha um jogador aleatório usando <strong>/claim</strong>."
+        },
+        "matches": {
+          "title": "Partidas",
+          "description": "As partidas são jogadas no formato MD1 e quem fizer 13 pontos primeiro vence. Você pode acompanhar seus resultados e partidas recentes usando <strong>/career</strong>."
+        },
+        "progress": {
+          "title": "Progresso e Classificação",
+          "description": "Vencer partidas rende pontos e ajuda seu time a subir na tabela de classificação. Quanto mais alto você vai, mais reconhecimento você ganha — e jogadores mais fortes devem entrar no seu elenco. As classificações são atualizadas regularmente e as melhores equipes são destacadas."
+        }
+      },
+      "cards": {
+        "title": "Cartinhas",
+        "introduction": {
+          "title": "Introdução às Cartinhas",
+          "description": "As estatísticas de todos os jogadores foram retiradas do site <a>thespike.gg</a>."
+        },
+        "calc": {
+          "title": "Cálculo de Atributos",
+          "description": "AIM: <strong>(KPR * 40) + (HS% * 1.8)</strong>\nHS: <strong>HS% * 2</strong>\nMOV: <strong>(1.5 - DPR) * 80</strong>\nAGG: <strong>(FBPR * 250) + (KPR * 15)</strong>\nACS: <strong>ACS / 3</strong>\nGMS: <strong>(APR * 150) + (FBSR * 0.6)</strong>\n\nApós o cálculo, a maioria dos jogadores recebem buffs e debuffs manuais de acordo com o tier que eles jogam."
+        },
+        "attributes": {
+          "title": "Atributos",
+          "description": "AIM: <strong>Mira</strong>\nHS: <strong>Autoexplicativo</strong>\nMOV: <strong>Movimentação</strong>\nAGG: <strong>Agressividade</strong>\nACS: <strong>Pontuação Média Combate</strong>\nGMS: <strong>Noção de Jogo</strong>"
+        }
+      }
+    }
+  }
 }

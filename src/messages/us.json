@@ -5,26 +5,30 @@
     "support": "Support"
   },
   "home": {
-    "title": "Your <strong>e-sports</strong> Discord bot",
+    "title": "Your <strong>VALORANT</strong> Simulator Bot for Discord",
     "desc": {
-      "1": "More than just a bot, I'm your source of first-hand information and entertainment for your Discord server!",
+      "1": "Imagine a universe where the passion for VALORANT comes alive. With Sabine, you don't just manage your own team — you dive into electrifying matches and build a true dynasty of stars. Feel the power to transform your team into a legend!",
       "2": "Schedule matches from various leagues",
       "3": "Stay up to date with results and statistics",
       "4": "Make predictions",
       "5": "Compete against the best players"
     },
     "add": "Add me",
-    "setup": {
-      "title": "Easy to Setup",
-      "desc": "Setting up the bot is too easy. Just run the command <strong>/tournament add</strong>, select which game you want and select the channels.\n\nIf need help, join our support server!"
+    "build": {
+      "title": "Build your Roster",
+      "desc": "Build your roster is too use. Just run the command <strong>/claim</strong> to claim a random player, <strong>/promote</strong> to promote him to active roster and <strong>/roster</strong> to see your roster.\n\nIf need help, join our <a>support server</a>!"
     },
-    "use": {
-      "title": "Easy to Use",
-      "desc": "Using the bot is also very easy. Just click on the \"Predict\"  button to make a prediction and put the score that you want to predict for the match.\n\nIf need help, join our support server!"
+    "cards": {
+      "title": "Giant Diversity of Cards",
+      "desc": "There are more than {size} different cards to use and get by using <strong>/claim</strong> or buy by using <strong>/sign</strong>.\n\nIf need help, join our <a>support server</a>!"
+    },
+    "sign": {
+      "title": "Sign Players",
+      "desc": "Sign players using coins by using <strong>/sign</strong> and build your roster quickly and easily, without depending on the drop rate of <strong>/claim</strong>.\n\nIf need help, join our <a>support server</a>!"
     }
   },
   "commands": {
-    "title": "Bot commands",
+    "title": "Bot Commands",
     "admin": {
       "description": "See the dashboard and change the bot language"
     },
@@ -105,7 +109,69 @@
     "get_premium": "Get premium"
   },
   "metadata": {
-    "title": "Sabine | Your e-sports bot",
-    "desc": "More than just a bot, I'm your source of first-hand information and entertainment for your Discord server!\n\n🏆 Schedule matches from various leagues\n🎯 Stay up to date with results and statistics\n💡 Make predictions\n🥇 Compete against the best players"
+    "title": "Sabine | Your VALORANT simulator",
+    "desc": "Imagine a universe where the passion for VALORANT comes alive. With Sabine, you don't just manage your own team; you dive into electrifying matches and build a true dynasty of stars. Feel the power to transform your team into a legend!\n\n🏆 Schedule matches from various tournaments\n🎯 Stay updated with results and stats\n💡 Make predictions\n🥇 Compete with the best players"
+  },
+  "wiki": {
+    "title": "Select a Module",
+    "module": {
+      "predictions": {
+        "title": "Tournaments, predictions and results",
+        "introduction": {
+          "title": "Introduction to Tournament, predictions and results",
+          "description": "This feature lets you track Valorant and League of Legends matches, make predictions, and view the results."
+        },
+        "tournaments": {
+          "title": "Adding Tournaments",
+          "description": "To add a Valorant or League of Legends tournament, you must use <strong>/tournament add</strong>, select the game, select the matches channel and select the results channel.\n\nIt is highly recommended that the matches channel be a channel where members cannot send messages and only Sabine's message flow is allowed."
+        },
+        "predictions": {
+          "title": "Making Predictions",
+          "description": "To make a prediction, you must to go to the matches channel and look for the Sabine's message. After that, look for the <strong>Predict</strong> button and make your prediction."
+        },
+        "bets": {
+          "title": "Making Bets",
+          "description": "To make a bet, you must go to the matches channel and look for the Sabine's message. You must also have at least 500 coins to make a bet. After that, look for the <strong>Bet</strong> button and make your bet."
+        }
+      },
+      "simulator": {
+        "title": "Simulator",
+        "introduction": {
+          "title": "Introduction to Simulator",
+          "description": "The simulator is a unique experience. Build your roster with players of different skill levels, duel against opponents, and prove you have what it takes to lead your team to the top. Every decision matters — victory depends on your team level!"
+        },
+        "how_it_works": {
+          "title": "How it Works",
+          "description": "Each match in the simulator is resolved based on your players' stats and a bit of luck. The stronger and more balanced your team is, the higher your chances of winning.\n\nTo duel against someone, your team must have 5 players on active roster. After that, you can use <strong>/duel</strong> to duel agains someone."
+        },
+        "players": {
+          "title": "Players",
+          "description": "Every player in the simulator has a overall and unique <a>attributes</a> like aim, headshot, movement, aggression, ACS, and game sense. You can buy and sell players you do not want. Some players are rarer and perform better in clutch situations.\n\nClaim a random player by using <strong>/claim</strong>."
+        },
+        "matches": {
+          "title": "Matches",
+          "description": "Matches are played in a BO1 format and whoever scores 13 points first wins. You can track your recent results and matches by using <strong>/career</strong>."
+        },
+        "progress": {
+          "title": "Progression and Ranking",
+          "description": "Winning matches earns you points and helps your team climb the global leaderboard. The higher you go, the more recognition you gain — and stronger players might want to join your roster. Rankings are updated regularly, and the best teams get featured."
+        }
+      },
+      "cards": {
+        "title": "Cards",
+        "introduction": {
+          "title": "Introduction to Cards",
+          "description": "All players' stats are taken from the website <a>thespike.gg</a>."
+        },
+        "calc": {
+          "title": "Attributes Calculation",
+          "description": "AIM: <strong>(KPR * 40) + (HS% * 1.8)</strong>\nHS: <strong>HS% * 2</strong>\nMOV: <strong>(1.5 - DPR) * 80</strong>\nAGG: <strong>(FBPR * 250) + (KPR * 15)</strong>\nACS: <strong>ACS / 3</strong>\nGMS: <strong>(APR * 150) + (FBSR * 0.6)</strong>\n\nAfter the calculation, most players get manually adjusted buffs and debuffs based on the tier they play in."
+        },
+        "attributes": {
+          "title": "Attributes",
+          "description": "AIM: <strong>Self-explanatory</strong>\nHS: <strong>Self-explanatory</strong>\nMOV: <strong>Movement</strong>\nAGG: <strong>Aggression</strong>\nACS: <strong>Average Score Combat</strong>\nGMS: <strong>Game Sense</strong>"
+        }
+      }
+    }
   }
 }
