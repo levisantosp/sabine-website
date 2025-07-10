@@ -26,7 +26,7 @@ export default function MobileLanguageMenu() {
         />
         {isOpen && (
           <div
-            className='absolute top-52 right-0 bg-[#2A2A2A] rounded-md shadow-md w-50 z-20'
+            className='absolute top-12 right-[-53px] bg-[#2A2A2A] rounded-md shadow-md w-50 z-20'
           >
             <ul>
               <li
