@@ -2,7 +2,8 @@
   "header": {
     "commands": "Comandos",
     "home": "Página principal",
-    "support": "Suporte"
+    "support": "Suporte",
+    "changelog": "Atualizações"
   },
   "home": {
     "title": "O Seu Simulador de <strong>VALORANT</strong> para Discord",

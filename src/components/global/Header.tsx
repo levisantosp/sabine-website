@@ -7,7 +7,8 @@ import {
   House,
   Bot,
   CircleHelp,
-  BookCheck
+  BookCheck,
+  NotebookText
 } from 'lucide-react'
 import MobileMenuWrapper from './MobileMenuWrapper'
 
@@ -32,7 +33,6 @@ export default async function Header({ }: Props) {
           <span className='text-xl sm:text-3xl md:text-5xl font-bold text-white'>Sabine</span>
         </Link>
       </div>
-
       <ul className='hidden md:flex flex-wrap items-center justify-end gap-4 text-base/6 mt-2 sm:mt-0'>
         <li className='transition duration-300 hover:scale-105'>
           <Link
@@ -54,6 +54,17 @@ export default async function Header({ }: Props) {
             <div className='flex gap-2'>
               <House />
               {t('header.home')}
+            </div>
+          </Link>
+        </li>
+        <li className='transition duration-300 hover:scale-105'>
+          <Link
+            href='/changelog'
+            className='flex py-1 sm:py-2 px-2 sm:px-4 bg-[#0d763e] text-white rounded-md hover:bg-[#11924b] transition'
+          >
+            <div className='flex gap-2'>
+              <NotebookText />
+              {t('header.changelog')}
             </div>
           </Link>
         </li>
@@ -91,11 +102,9 @@ export default async function Header({ }: Props) {
           <LanguageMenu />
         </li>
       </ul>
- 
       <div className='flex md:hidden'>
         <MobileMenuWrapper />
       </div>
     </header>
-
   )
 }

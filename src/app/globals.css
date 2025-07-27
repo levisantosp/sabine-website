@@ -2,9 +2,7 @@
 
 :root {
   --background: #1A1A1A;
-  --foreground: #E0E0E0 
-
-;
+  --foreground: #E0E0E0;
 }
 
 body {
@@ -15,4 +13,36 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+.prose h1 {
+  font-size: 35px;
+  font-weight: 700;
+  font-weight: bold;
+}
+
+.prose p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.prose a {
+  color: #509ef8;
+  text-decoration: underline;
+}
+
+.prose ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+.prose img {
+  max-width: 360px;
+  border-radius: 0.5rem;
+}
+@media (min-width: 768px) {
+  .prose img {
+    max-width: 600px;
+    border-radius: 0.5rem;
+  }
 }

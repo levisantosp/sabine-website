@@ -10,6 +10,7 @@ export default async function MobileMenuWrapper() {
         home={t('header.home')}
         commands={t('header.commands')}
         support={t('header.support')}
+        changelog={t('header.changelog')}
       />
     </>
   )

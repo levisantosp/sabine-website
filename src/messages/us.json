@@ -2,7 +2,8 @@
   "header": {
     "commands": "Commands",
     "home": "Home",
-    "support": "Support"
+    "support": "Support",
+    "changelog": "Changelog"
   },
   "home": {
     "title": "Your <strong>VALORANT</strong> Simulator Bot for Discord",
@@ -173,5 +174,8 @@
         }
       }
     }
+  },
+  "changelog": {
+    "title": "Last Updates"
   }
 }

@@ -11,9 +11,9 @@ type Props = {
   home: string
   commands: string
   support: string
+  changelog: string
 }
-
-export default function MobileMenu({ add_me, home, commands, support }: Props) {
+export default function MobileMenu({ add_me, home, commands, support, changelog }: Props) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -22,7 +22,6 @@ export default function MobileMenu({ add_me, home, commands, support }: Props) {
         <button onClick={() => setIsOpen(prev => !prev)}>
           <Menu />
         </button>
-
         {isOpen && (
           <div className='absolute top-11 right-1 bg-[#2A2A2A] rounded-sm shadow-md z-50'>
             <ul className='flex flex-col gap-2 justify-center items-center p-2'>
@@ -38,6 +37,11 @@ export default function MobileMenu({ add_me, home, commands, support }: Props) {
               <li>
                 <Link href='/' className='inline-block py-1 px-4'>
                   {home}
+                </Link>
+              </li>
+              <li>
+                <Link href='/changelog' className='inline-block py-1 px-4'>
+                  {changelog}
                 </Link>
               </li>
               <li>

@@ -1,5 +1,4 @@
 import { getTranslations } from 'next-intl/server'
-import Footer from '../../../components/global/Footer'
 
 type Command = {
   name: string
@@ -44,7 +43,6 @@ export default async function Commands() {
             ))
         }
       </div>
-      <Footer />
     </>
   )
 }
