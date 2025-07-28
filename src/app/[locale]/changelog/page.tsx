@@ -11,12 +11,13 @@ type Update = {
   content: Content[]
 }
 type Props = {
-  params: {
+  params: Promise<{
     locale: string
-  }
+  }>
 }
 export default async function ChangeLog({ params }: Props) {
   const t = await getTranslations()
+  const { locale } = await params
   const updates: Update[] = await (await fetch(process.env.API_URL + '/updates')).json()
   return (
     <>
@@ -30,19 +31,19 @@ export default async function ChangeLog({ params }: Props) {
       >
         {
           updates.sort((a, b) => b.published_at - a.published_at)
-          .map((update, i) => (
-            <Link
-              key={i}
-              className='bg-[#2A2A2A] p-5 rounded-md max-w-xs md:max-w-2xl mb-6 w-[700] transition duration-500 hover:scale-105'
-              href={`/${params.locale}/changelog/v${update.id}`}
-            >
-              <h2
-                className='text-2xl font-bold'
+            .map(async(update, i) => (
+              <Link
+                key={i}
+                className='bg-[#2A2A2A] p-5 rounded-md max-w-xs md:max-w-2xl mb-6 w-[700] transition duration-500 hover:scale-105'
+                href={`/${locale}/changelog/v${update.id}`}
               >
-                v{update.id}
-              </h2>
-            </Link>
-          ))
+                <h2
+                  className='text-2xl font-bold'
+                >
+                  v{update.id}
+                </h2>
+              </Link>
+            ))
         }
       </div>
     </>

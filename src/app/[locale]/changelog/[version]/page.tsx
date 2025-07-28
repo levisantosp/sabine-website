@@ -25,7 +25,7 @@ export default async function Update({ params }: Props) {
   if(!content) return notFound()
   return (
     <>
-      <div className='prose flex flex-col justify-center items-center px-4 md:px-0 pt-15'>
+      <div className='prose flex flex-col px-10 pt-15'>
         <Markdown>
           {content.text.replaceAll('`', '').trim()}
         </Markdown>

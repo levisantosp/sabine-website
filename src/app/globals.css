@@ -21,6 +21,13 @@ html {
   font-weight: bold;
 }
 
+.prose h2 {
+  font-size: 25px;
+  font-weight: 700;
+  font-weight: bold;
+  text-align: left !important;
+}
+
 .prose p {
   line-height: 1.8;
   font-size: 1.1rem;
