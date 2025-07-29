@@ -5,8 +5,9 @@ import { getMessages, getTranslations } from 'next-intl/server'
 import { Inter } from 'next/font/google'
 import { Metadata } from 'next'
 import Footer from '../../components/global/Footer'
+import Script from 'next/script'
 
-export const generateMetadata = async({ params }: Props): Promise<Metadata> => {
+export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
   const { locale } = await params
   const t = await getTranslations({ locale })
   return {
@@ -43,10 +44,17 @@ export default async function RootLayout({
           locale={locale}
         >
           <main className='flex-grow'>
+            <Script
+              async
+              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3346744916189692"
+              crossOrigin="anonymous"
+              strategy='afterInteractive'
+            >
+            </Script>
             {children}
           </main>
         </NextIntlClientProvider>
-        <Footer/>
+        <Footer />
       </body>
     </html>
   )
