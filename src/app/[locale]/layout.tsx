@@ -17,7 +17,10 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
       card: 'summary',
       images: ['/sabine.png']
     },
-    metadataBase: new URL('https://sabinebot.xyz/')
+    metadataBase: new URL('https://sabinebot.xyz/'),
+    other: {
+      'google-adsense-account': 'ca-pub-3346744916189692'
+    }
   }
 }
 type Props = {
@@ -46,9 +49,9 @@ export default async function RootLayout({
           <main className='flex-grow'>
             <Script
               async
-              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3346744916189692"
-              crossOrigin="anonymous"
-              strategy='afterInteractive'
+              src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3346744916189692'
+              crossOrigin='anonymous'
+              // strategy='afterInteractive'
             />
             {children}
           </main>
