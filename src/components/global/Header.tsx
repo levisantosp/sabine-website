@@ -8,7 +8,8 @@ import {
   Bot,
   CircleHelp,
   BookCheck,
-  NotebookText
+  NotebookText,
+  GlobeLock
 } from 'lucide-react'
 import MobileMenuWrapper from './MobileMenuWrapper'
 
@@ -46,7 +47,18 @@ export default async function Header({ }: Props) {
             </div>
           </Link>
         </li>
-        <li className='transition duration-300 hover:scale-105'>
+        <li className='transition duration-300 hover:scale-105 rounded-md hover:bg-[#11924b]'>
+          <Link
+            href='/privacy'
+            className='flex py-1 sm:py-2 px-2 sm:px-4 text-white rounded-md'
+          >
+            <div className='flex gap-2'>
+              <GlobeLock />
+              Privacy
+            </div>
+          </Link>
+        </li>
+        {/* <li className='transition duration-300 hover:scale-105'>
           <Link
             href='/'
             className='flex py-1 sm:py-2 px-2 sm:px-4 bg-[#0d763e] text-white rounded-md hover:bg-[#11924b] transition'
@@ -56,7 +68,7 @@ export default async function Header({ }: Props) {
               {t('header.home')}
             </div>
           </Link>
-        </li>
+        </li> */}
         <li className='transition duration-300 hover:scale-105'>
           <Link
             href='/changelog'

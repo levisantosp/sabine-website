@@ -35,6 +35,11 @@ export default function MobileMenu({ add_me, home, commands, support, changelog 
                 </Link>
               </li>
               <li>
+                <Link href='/privacy' className='inline-block py-1 px-4'>
+                  Privacy
+                </Link>
+              </li>
+              <li>
                 <Link href='/' className='inline-block py-1 px-4'>
                   {home}
                 </Link>

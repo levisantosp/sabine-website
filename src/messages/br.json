@@ -21,7 +21,7 @@
     },
     "cards": {
       "title": "Diversidade Gigante de Cards",
-      "desc": "São mais de {size} cards diferentes para você aproveitar e coletar com o comando <strong>/claim</strong> ou comprar com o comando <strong>/sign</strong>.\n\nSe precisar de ajuda, entre nosso <a>servidor de suporte</a>!"
+      "desc": "São {size} cards diferentes para você aproveitar e coletar com o comando <strong>/claim</strong> ou comprar com o comando <strong>/sign</strong>.\n\nSe precisar de ajuda, entre nosso <a>servidor de suporte</a>!"
     },
     "sign": {
       "title": "Contrate Jogadores",
@@ -111,7 +111,7 @@
   },
     "metadata": {
     "title": "Sabine | Seu simulador de VALORANT",
-    "desc": "Imagine um universo onde a paixão pelo VALORANT ganha vida. Com a Sabine, você não apenas gerencia seu próprio time, mas também mergulha em partidas eletrizantes e constrói uma verdadeira dinastia de craques. Sinta o poder de transformar seu time em lenda!\n\n🏆 Agende jogos de vários campeonatos\n🎯 Fique por dentro de resultados e estatísticas\n💡 Faça palpites\n🥇 Dispute com os melhores jogadores"
+    "desc": "Mergulhe em um bot de VALORANT/League of Legends com estatísticas, palpites, placares ao vivo, apostas a muito mais!"
   },
   "wiki": {
     "title": "Selecione um Módulo",
@@ -174,5 +174,9 @@
         }
       }
     }
+  },
+  "privacy": {
+    "title": "Política de Privacidade",
+    "description": "Last Update: 8/7/2025\n\nEste site não coleta, armazena ou compartilha nenhuma informação pessoal.\nNão utilizamos cookies, ferramentas de rastreamento ou serviços de análise.\nO único propósito deste site é exibir funcionalidades do nosso bot do Discord.\nSe você tiver alguma dúvida sobre esta Política de Privacidade, entre em contato conosco pelo Discord em nosso servidor oficial."
   }
 }

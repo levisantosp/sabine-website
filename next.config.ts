@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'cdn.sabinebot.xyz'
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn2.sabinebot.xyz'
       }
     ]
   }

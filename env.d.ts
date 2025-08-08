@@ -6,6 +6,7 @@ declare global {
       PORT: number
       INVITE: string
       SUPPORT: string
+      CDN_URL: string
     }
   }
 }
