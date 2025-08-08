@@ -45,21 +45,21 @@ export default async function Home() {
           </Link>
         </div>
         <Image
-          src={`${process.env.CDN_URL}/389.png`}
+          src={`${process.env.CDN_URL}/cards/389.png`}
           width={257}
           height={360}
           alt='image'
           className='hidden lg:block relative md:top-1 md:left-20 mx-auto mt-8 filter brightness-90 transition-transform duration-500 hover:scale-105 hover:brightness-110 hover:-translate-y-1'
         />
         <Image
-          src={`${process.env.CDN_URL}/388.png`}
+          src={`${process.env.CDN_URL}/cards/388.png`}
           width={257}
           height={360}
           alt='image'
           className='hidden lg:block relative md:top-1 md:left-20 mx-auto mt-8 filter brightness-90 transition-transform duration-500 hover:scale-105 hover:brightness-110 hover:-translate-y-1'
         />
         <Image
-          src={`${process.env.CDN_URL}/392.png`}
+          src={`${process.env.CDN_URL}/cards/392.png`}
           width={257}
           height={360}
           alt='image'
@@ -140,7 +140,7 @@ export default async function Home() {
           </li>
           <li className='flex flex-col md:flex-row bg-[#2A2A2A] max-w-90 md:max-w-2xl rounded-md px-4 py-4 transition-transform duration-500 hover:scale-105 hover:brightness-110 hover:-translate-y-1'>
             <Image
-              src={`${process.env.CDN_URL}/389.png`}
+              src={`${process.env.CDN_URL}/cards/389.png`}
               width={257}
               height={360}
               alt='a'
