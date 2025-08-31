@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect } from "react"
 
 declare global {
   interface Window {
@@ -11,11 +11,11 @@ export default function GoogleAds() {
   })
   return (
     <ins
-      className='adsbygoogle'
-      style={{ display: 'block' }}
-      data-ad-client='ca-pub-3346744916189692'
-      data-ad-format='auto'
-      data-full-width-response='true'
+      className="adsbygoogle"
+      style={{ display: "block" }}
+      data-ad-client="ca-pub-3346744916189692"
+      data-ad-format="auto"
+      data-full-width-response="true"
     />
   )
 }

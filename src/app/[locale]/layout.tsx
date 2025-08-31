@@ -1,25 +1,25 @@
-import Header from '@/components/global/Header'
-import '../globals.css'
-import { NextIntlClientProvider } from 'next-intl'
-import { getMessages, getTranslations } from 'next-intl/server'
-import { Inter } from 'next/font/google'
-import { Metadata } from 'next'
-import Footer from '../../components/global/Footer'
-import Script from 'next/script'
+import Header from "@/components/global/Header"
+import "../globals.css"
+import { NextIntlClientProvider } from "next-intl"
+import { getMessages, getTranslations } from "next-intl/server"
+import { Inter } from "next/font/google"
+import { Metadata } from "next"
+import Footer from "../../components/global/Footer"
+import Script from "next/script"
 
 export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
   const { locale } = await params
   const t = await getTranslations({ locale })
   return {
-    title: t('metadata.title'),
-    description: t('metadata.desc'),
+    title: t("metadata.title"),
+    description: t("metadata.desc"),
     twitter: {
-      card: 'summary',
-      images: ['/sabine.png']
+      card: "summary",
+      images: ["/sabine.png"]
     },
-    metadataBase: new URL('https://sabinebot.xyz/'),
+    metadataBase: new URL("https://sabinebot.xyz/"),
     other: {
-      'google-adsense-account': 'ca-pub-3346744916189692'
+      "google-adsense-account": "ca-pub-3346744916189692"
     }
   }
 }
@@ -30,7 +30,7 @@ type Props = {
   }>
 }
 const inter = Inter({
-  subsets: ['latin']
+  subsets: ["latin"]
 })
 export default async function RootLayout({
   children,
@@ -46,12 +46,12 @@ export default async function RootLayout({
           messages={messages}
           locale={locale}
         >
-          <main className='flex-grow'>
+          <main className="flex-grow">
             <Script
               async
-              src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3346744916189692'
-              crossOrigin='anonymous'
-              strategy='afterInteractive'
+              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3346744916189692"
+              crossOrigin="anonymous"
+              strategy="afterInteractive"
             />
             {children}
           </main>
