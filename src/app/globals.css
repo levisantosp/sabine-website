@@ -47,6 +47,7 @@ html {
   max-width: 360px;
   border-radius: 0.5rem;
 }
+
 @media (min-width: 768px) {
   .prose img {
     max-width: 600px;
