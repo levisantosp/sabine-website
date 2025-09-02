@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server"
 import Link from "next/link"
+import UpdateLoading from "../../../components/changelog/UpdateLoading"
 
 type Content = {
   lang: string
@@ -18,7 +19,6 @@ type Props = {
 export default async function ChangeLog({ params }: Props) {
   const t = await getTranslations()
   const { locale } = await params
-  const updates: Update[] = await (await fetch(process.env.API_URL + "/updates")).json()
   return (
     <>
       <div>
@@ -26,26 +26,9 @@ export default async function ChangeLog({ params }: Props) {
           {t("changelog.title")}
         </h1>
       </div>
-      <div
-        className="flex flex-col items-center justify-center pt-10"
-      >
-        {
-          updates.sort((a, b) => b.published_at - a.published_at)
-            .map(async(update, i) => (
-              <Link
-                key={i}
-                className="bg-[#2A2A2A] p-5 rounded-md max-w-xs md:max-w-2xl mb-6 w-[700] transition duration-500 hover:scale-105"
-                href={`/${locale}/changelog/v${update.id}`}
-              >
-                <h2
-                  className="text-2xl font-bold"
-                >
-                  v{update.id}
-                </h2>
-              </Link>
-            ))
-        }
-      </div>
+      <UpdateLoading
+        locale={locale}
+      />
     </>
   )
 }
