@@ -19,6 +19,7 @@
     "players": "github:SabineBot/players",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-icons": "^5.5.0",
     "react-markdown": "^10.1.0",
     "remark": "^15.0.1",
     "sileco.db": "^2.2.2"
