@@ -1,165 +1,65 @@
 import { getTranslations } from "next-intl/server"
 import Image from "next/image"
 import Link from "next/link"
+import { getPlayers } from "players"
+import { ArrowDown } from "lucide-react"
+
+const players = getPlayers()
 
 export default async function Home() {
-  let players = []
   const t = await getTranslations()
-  try {
-    const res = await fetch(process.env.API_URL + "/players")
-    if(!res.ok) throw new Error("Failed to fetch players")
-    players = await res.json()
-  }
-  catch(e) {
-    console.error(e)
-  }
   return (
     <>
-      <div className="px-4 md:px-30 pt-8 md:pt-3 flex flex-col md:flex-row items-start gap-8 md:gap-0">
-        <div>
-          <h1 className="md:pt-12 text-3xl font-bold md:text-4xl max-w-full md:max-w-md">
-            {t.rich("home.title", {
-              strong: (chunks) => <span className="text-[#3442b8]">{chunks}</span>
-            })}
-          </h1>
-          <p
-            className="text-lg md:text-xl max-w-sm md:max-w-lg pt-3 md:pt-5 text-[#9CA3AF]"
-          >
-            {t("home.desc.1")}
-          </p>
-          <Link
-            href="/invite"
-            target="_blank"
-            className="flex items-center justify-center text-lg md:text-xl bg-[#3442b8] rounded-md gap-3 mt-5 w-fit px-6 py-2 transition duration-500 hover:scale-105"
-          >
-            <span>
-              {t("home.add")}
-            </span>
-            <Image
-              src="/redirect.png"
-              width={25}
-              height={50}
-              alt="plus"
-              className="invert"
-            />
-          </Link>
-        </div>
+      <div className="h-screen flex flex-col justify-center items-center gap-8 md:gap-0">
         <Image
-          src={`${process.env.CDN_URL}/cards/389.png`}
-          width={257}
-          height={360}
-          alt="image"
-          className="hidden lg:block relative md:top-1 md:left-20 mx-auto mt-8 filter brightness-90 transition-transform duration-500 hover:scale-105 hover:brightness-110 hover:-translate-y-1"
+          src="/sabine.png"
+          width={180}
+          height={180}
+          alt="sabine"
+          className="rounded-full"
         />
-        <Image
-          src={`${process.env.CDN_URL}/cards/388.png`}
-          width={257}
-          height={360}
-          alt="image"
-          className="hidden lg:block relative md:top-1 md:left-20 mx-auto mt-8 filter brightness-90 transition-transform duration-500 hover:scale-105 hover:brightness-110 hover:-translate-y-1"
-        />
-        <Image
-          src={`${process.env.CDN_URL}/cards/392.png`}
-          width={257}
-          height={360}
-          alt="image"
-          className="hidden lg:block relative md:top-1 md:left-20 mx-auto mt-8 filter brightness-90 transition-transform duration-500 hover:scale-105 hover:brightness-110 hover:-translate-y-1"
+        <h1 className="md:pt-6 text-6xl font-bold md:text-8xl max-w-full md:max-w-md">
+          Sabine
+        </h1>
+        <h2 className="text-center md:pt-6 text-2xl md:text-4xl max-w-full">
+          {t("home.title")}
+        </h2>
+        <Link
+          href="/invite"
+          target="_blank"
+          className="flex items-center md:text-3xl gap-2 bg-[#3442b8] rounded-2xl mt-5 px-6 py-2 transition duration-300 hover:scale-105"
+        >
+          <span>
+            {t("home.add")}
+          </span>
+          <Image
+            src="/redirect.png"
+            width={35}
+            height={50}
+            alt="add"
+            className="invert"
+          />
+        </Link>
+        <ArrowDown
+          size={50}
+          className="animate-bounce md:mt-25"
         />
       </div>
-      <div className="flex gap-10 px-4 md:px-30 pt-8 md:pt-10 md:max-w-7xl pb-10">
-        <ul className="flex flex-col gap-y-10">
-          <li className="flex flex-col md:flex-row bg-[#2A2A2A] md:max-w-2xl rounded-md px-4 py-4 transition-transform duration-500 hover:scale-105 hover:brightness-110 hover:-translate-y-1">
-            <Image
-              src="/home/illustration-1.png"
-              width={248}
-              height={335}
-              alt="a"
-              className="rounded-md shadow-xl transition-transform duration-500 hover:scale-105 hover:brightness-110 hover:-translate-y-1"
-            />
-            <div className="flex flex-col">
-              <h2 className="text-2xl font-bold text-center pt-1">
+      <div className="flex px-6 md:px-20 pt-8 md:pt-15 pb-10">
+        <div className="flex flex-col gap-25 justify-between">
+          <div className="flex flex-col md:flex-row items-center gap-10">
+            <div className="text-center md:text-left md:flex-1">
+              <h2 className="text-[30px] font-bold pt-10">
                 {t("home.build.title")}
               </h2>
               <p
-                className="text-lg px-4 pt-5"
-                style={
-                  {
-                    whiteSpace: "pre-line"
-                  }
-                }
+                style={{ whiteSpace: "pre-line" }}
+                className="text-lg pt-4 text-[#9CA3AF]"
               >
                 {t.rich("home.build.desc", {
-                  strong: (chunks) => <span className="font-bold bg-[#1A1A1A] text-[#9CA3AF] rounded-md md:max-w-30">{chunks}</span>,
-                  a: (chunks) => (
-                    <a
-                      className="font-bold text-blue-400 underline"
-                      href={process.env.SUPPORT}
-                      target="_blank"
-                    >
-                      {chunks}
-                    </a>
-                  )
-                })}
-              </p>
-            </div>
-          </li>
-          <li className="flex flex-col md:flex-row bg-[#2A2A2A] max-w-90 md:max-w-2xl rounded-md px-4 py-4 transition-transform duration-500 hover:scale-105 hover:brightness-110 hover:-translate-y-1">
-            <Image
-              src="/home/sign.png"
-              width={251}
-              height={337}
-              alt="a"
-              className="rounded-md shadow-xl transition-transform duration-500 hover:scale-105 hover:brightness-110 hover:-translate-y-1"
-            />
-            <div className="flex flex-col">
-              <h2 className="md:text-2xl text-xl font-bold text-center pt-1">
-                {t("home.sign.title")}
-              </h2>
-              <p
-                className="md:text-lg px-4 pt-5"
-                style={
-                  {
-                    whiteSpace: "pre-line"
-                  }
-                }
-              >
-                {t.rich("home.sign.desc", {
-                  strong: (chunks) => <span className="font-bold bg-[#1A1A1A] text-[#9CA3AF] rounded-md md:max-w-30">{chunks}</span>,
-                  a: (chunks) => (
-                    <a
-                      className="font-bold text-blue-400 underline"
-                      href={process.env.SUPPORT}
-                      target="_blank"
-                    >
-                      {chunks}
-                    </a>
-                  )
-                })}
-              </p>
-            </div>
-          </li>
-          <li className="flex flex-col md:flex-row bg-[#2A2A2A] max-w-90 md:max-w-2xl rounded-md px-4 py-4 transition-transform duration-500 hover:scale-105 hover:brightness-110 hover:-translate-y-1">
-            <Image
-              src={`${process.env.CDN_URL}/cards/389.png`}
-              width={257}
-              height={360}
-              alt="a"
-              className="transition-transform duration-500 hover:scale-105 hover:brightness-110 hover:-translate-y-1"
-            />
-            <div className="flex flex-col">
-              <h2 className="md:text-2xl text-xl font-bold text-center pt-1">
-                {t("home.cards.title")}
-              </h2>
-              <p
-                className="md:text-lg px-4 pt-5"
-                style={
-                  {
-                    whiteSpace: "pre-line"
-                  }
-                }
-              >
-                {t.rich("home.cards.desc", {
-                  strong: (chunks) => <span className="font-bold bg-[#1A1A1A] text-[#9CA3AF] rounded-md md:max-w-30">{chunks}</span>,
+                  strong: (chunks) => (
+                    <span className="font-extrabold">{chunks}</span>
+                  ),
                   a: (chunks) => (
                     <a
                       className="font-bold text-blue-400 underline"
@@ -169,12 +69,112 @@ export default async function Home() {
                       {chunks}
                     </a>
                   ),
-                  size: players.length || "NaN"
                 })}
               </p>
             </div>
-          </li>
-        </ul>
+            <div className="hidden md:flex gap-5 flex-col md:flex-1 md:flex-row justify-center">
+              <Image
+                src="/home/claim.png"
+                width={300}
+                height={300}
+                alt="claim"
+                className="rounded-md shadow-xl transition duration-300 hover:scale-105 hover:brightness-110"
+              />
+              <Image
+                src="/home/match.png"
+                width={300}
+                height={300}
+                alt="match"
+                className="rounded-md shadow-xl transition duration-300 hover:scale-105 hover:brightness-110"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row items-center gap-10">
+            <div className="hidden md:flex gap-5 flex-col md:flex-row md:flex-1 justify-center">
+              <Image
+                src="/home/live.png"
+                width={300}
+                height={300}
+                alt="claim"
+                className="rounded-md shadow-xl transition duration-300 hover:scale-105 hover:brightness-110"
+              />
+              <Image
+                src="/home/image.png"
+                width={300}
+                height={300}
+                alt="match"
+                className="rounded-md shadow-xl transition duration-300 hover:scale-105 hover:brightness-110"
+              />
+            </div>
+            <div className="text-center md:text-left md:flex-1">
+              <h2 className="text-[30px] font-bold pt-10">
+                {t("home.realtime.title")}
+              </h2>
+              <p
+                style={{ whiteSpace: "pre-line" }}
+                className="text-lg pt-4 text-[#9CA3AF]"
+              >
+                {t.rich("home.realtime.desc", {
+                  strong: (chunks) => (
+                    <span className="font-extrabold">{chunks}</span>
+                  ),
+                  a: (chunks) => (
+                    <a
+                      className="font-bold text-blue-400 underline"
+                      href={process.env.SUPPORT}
+                      target="_blank"
+                    >
+                      {chunks}
+                    </a>
+                  ),
+                })}
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row items-center gap-10">
+            <div className="text-center md:text-left md:flex-1">
+              <h2 className="text-[30px] font-bold pt-10">
+                {t("home.cards.title")}
+              </h2>
+              <p
+                style={{ whiteSpace: "pre-line" }}
+                className="text-lg pt-4 text-[#9CA3AF]"
+              >
+                {t.rich("home.cards.desc", {
+                  strong: (chunks) => (
+                    <span className="font-extrabold">{chunks}</span>
+                  ),
+                  a: (chunks) => (
+                    <a
+                      className="font-bold text-blue-400 underline"
+                      href={process.env.SUPPORT}
+                      target="_blank"
+                    >
+                      {chunks}
+                    </a>
+                  ),
+                  size: players.length
+                })}
+              </p>
+            </div>
+            <div className="hidden md:flex gap-5 md:flex-1 justify-center">
+              <Image
+                src={`${process.env.CDN_URL}/cards/389.png`}
+                width={300}
+                height={300}
+                alt="claim"
+                className="transition duration-300 hover:scale-105 hover:brightness-110"
+              />
+              <Image
+                src={`${process.env.CDN_URL}/cards/368.png`}
+                width={300}
+                height={300}
+                alt="match"
+                className="transition duration-300 hover:scale-105 hover:brightness-110"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </>
   )
