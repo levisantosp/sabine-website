@@ -22,7 +22,7 @@ export default function CardLoading({ src, collection, alt }: Props) {
           width={250}
           alt={alt}
           className={`rounded-3xl text-center ${loaded ? "opacity-100" : "opacity-0"}`}
-          onLoadingComplete={() => setLoaded(true)}
+          onLoad={() => setLoaded(true)}
         />
         <span>
           {collection}
