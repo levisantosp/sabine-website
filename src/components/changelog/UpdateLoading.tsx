@@ -16,7 +16,6 @@ type Props = {
   locale: string
 }
 export default function UpdateLoading({ locale }: Props) {
-  console.log(process.env.API_URL)
   const [loading, setLoading] = useState(true)
   const [updates, setUpdates] = useState<Update[]>([])
   useEffect(() => {
