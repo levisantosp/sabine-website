@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { Transition } from "@headlessui/react"
 import { usePathname, useRouter } from "next/navigation"
 import { locales } from "../../../config"
 import { Languages } from "lucide-react"
@@ -11,7 +10,7 @@ export default function MobileLanguageMenu() {
   const [isOpen, setIsOpen] = useState(false)
   const router = useRouter()
   const pathname = usePathname()
-  const changeLanguage = (lang: string) => {
+  const changeLanguage = (lang: typeof locales[number]) => {
     const reg = new RegExp(`^/(${locales.join("|")})`)
     router.push(`/${lang}${pathname.replace(reg, "")}`)
   }

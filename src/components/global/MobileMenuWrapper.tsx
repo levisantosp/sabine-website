@@ -6,11 +6,10 @@ export default async function MobileMenuWrapper() {
   return (
     <>
       <MobileMenu
-        add_me={t("home.add")}
-        home={t("header.home")}
         commands={t("header.commands")}
-        support={t("header.support")}
         changelog={t("header.changelog")}
+        cards={t("header.cards")}
+        url={process.env.SUPPORT}
       />
     </>
   )

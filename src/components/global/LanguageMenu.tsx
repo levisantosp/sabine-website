@@ -11,7 +11,7 @@ export default function LanguageMenu() {
   const [isOpen, setIsOpen] = useState(false)
   const router = useRouter()
   const pathname = usePathname()
-  const changeLanguage = (lang: string) => {
+  const changeLanguage = (lang: typeof locales[number]) => {
     const reg = new RegExp(`^/(${locales.join("|")})`)
     router.push(`/${lang}${pathname.replace(reg, "")}`)
   }
@@ -24,8 +24,9 @@ export default function LanguageMenu() {
       >
         <Languages
           className="cursor-pointer"
+          width={30}
+          height={30}
         />
-
         <Transition
           show={isOpen}
           enter="transition-opacity duration-500 ease-out"
