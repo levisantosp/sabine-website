@@ -1,31 +1,23 @@
 {
   "header": {
     "commands": "Commands",
-    "home": "Home",
-    "support": "Support",
-    "changelog": "Changelog"
+    "changelog": "Changelog",
+    "cards": "Cards"
   },
   "home": {
-    "title": "Your <strong>VALORANT</strong> Simulator Bot for Discord",
-    "desc": {
-      "1": "Imagine a universe where the passion for VALORANT comes alive. With Sabine, you don't just manage your own team — you dive into electrifying matches and build a true dynasty of stars. Feel the power to transform your team into a legend!",
-      "2": "Schedule matches from various leagues",
-      "3": "Stay up to date with results and statistics",
-      "4": "Make predictions",
-      "5": "Compete against the best players"
-    },
-    "add": "Add me",
+    "title": "Bringing the eSports to your Discord server!",
+    "add": "Add to Discord",
     "build": {
-      "title": "Build your Roster",
-      "desc": "Build your roster is too use. Just run the command <strong>/claim</strong> to claim a random player, <strong>/promote</strong> to promote him to active roster and <strong>/roster</strong> to see your roster.\n\nIf need help, join our <a>support server</a>!"
+      "title": "Build your Dream Team and Compete in Ranked Matches",
+      "desc": "Build your Dream Team is too easy. Just run the command <strong>/claim</strong> to claim a random player, <strong>/promote</strong> to promote him to active roster and <strong>/roster</strong> to see your roster."
     },
     "cards": {
       "title": "Giant Diversity of Cards",
-      "desc": "There are {size} different cards to use and get by using <strong>/claim</strong> or buy by using <strong>/sign</strong>.\n\nIf need help, join our <a>support server</a>!"
+      "desc": "There are {size} different cards to use and get by using <strong>/claim</strong> or buy by using <strong>/sign</strong>."
     },
-    "sign": {
-      "title": "Sign Players",
-      "desc": "Sign players using coins by using <strong>/sign</strong> and build your roster quickly and easily, without depending on the drop rate of <strong>/claim</strong>.\n\nIf need help, join our <a>support server</a>!"
+    "realtime": {
+      "title": "Get Real-Time Live Matches Information",
+      "desc": "Get real-time live information on your favorite teams."
     }
   },
   "commands": {
@@ -104,10 +96,12 @@
     }
   },
   "footer": {
-    "add_bot": "Add bot",
-    "get_support": "Get support",
-    "commands": "Commands list",
-    "get_premium": "Get premium"
+    "contact": "Contact",
+    "legal": "Legal",
+    "learn": "Learn",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "commands": "Commands"
   },
   "metadata": {
     "title": "Sabine | Your VALORANT simulator",
@@ -181,5 +175,9 @@
   "privacy": {
     "title": "Privacy Policy",
     "description": "Last Update: 8/7/2025\n\nThis website does not collect, store, or share any personal information.\nWe do not use cookies, tracking tools, or analytics services.\nOur site’s sole purpose is to display features of our Discord bot.\nIf you have any questions about this Privacy Policy, you can contact us via Discord in our official server."
+  },
+  "cards": {
+    "title": "Cards",
+    "search": "Search"
   }
 }

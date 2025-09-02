@@ -1,31 +1,23 @@
 {
   "header": {
     "commands": "Comandos",
-    "home": "Página principal",
-    "support": "Suporte",
-    "changelog": "Atualizações"
+    "changelog": "Atualizações",
+    "cards": "Cartas"
   },
   "home": {
-    "title": "O Seu Simulador de <strong>VALORANT</strong> para Discord",
-    "desc": {
-      "1": "Imagine um universo onde a paixão pelo VALORANT ganha vida. Com a Sabine, você não apenas gerencia seu próprio time, mas também mergulha em partidas eletrizantes e constrói uma verdadeira dinastia de craques. Sinta o poder de transformar seu time em lenda!",
-      "2": "Agende jogos de vários campeonatos",
-      "3": "Fique por dentro de resultados e estatísticas",
-      "4": "Faça palpites",
-      "5": "Dispute com os melhores jogadores"
-    },
-    "add": "Me adicione",
+    "title": "Trazendo os eSports para o seu servidor no Discord!",
+    "add": "Adicionar ao Discord",
     "build": {
-      "title": "Monte seu Elenco",
-      "desc": "Montar o seu elenco é muito fácil. Basta rodar o comando <strong>/claim</strong> para obter um jogador aleatório, <strong>/promote</strong> para promovê-lo ao time titular e <strong>/roster</strong> para ver seu elenco.\n\nSe precisar de ajuda, entre nosso <a>servidor de suporte</a>!"
+      "title": "Monte seu Dream Team e Dispute Partidas Ranqueada",
+      "desc": "Montar o seu Dream Team é muito fácil. Basta rodar o comando <strong>/claim</strong> para obter um jogador aleatório, <strong>/promote</strong> para promovê-lo ao time titular e <strong>/roster</strong> para ver seu elenco."
     },
     "cards": {
       "title": "Diversidade Gigante de Cards",
-      "desc": "São {size} cards diferentes para você aproveitar e coletar com o comando <strong>/claim</strong> ou comprar com o comando <strong>/sign</strong>.\n\nSe precisar de ajuda, entre nosso <a>servidor de suporte</a>!"
+      "desc": "São {size} cards diferentes para você aproveitar e coletar com o comando <strong>/claim</strong> ou comprar com o comando <strong>/sign</strong>."
     },
-    "sign": {
-      "title": "Contrate Jogadores",
-      "desc": "Contrate jogadores por coins usando o comando <strong>/sign</strong> e monte seu elenco de forma prática e rápida, sem depender do drop rate do comando <strong>/claim</strong>.\n\nSe precisar de ajuda, entre nosso <a>servidor de suporte</a>!"
+    "realtime": {
+      "title": "Obtenha Informações de Partidas Ao Vivo em Tempo Real",
+      "desc": "Obtenha informações ao vivo em tempo real dos seus times favoritos."
     }
   },
   "commands": {
@@ -104,10 +96,12 @@
     }
   },
   "footer": {
-    "add_bot": "Adicionar bot",
-    "get_support": "Obter suporte",
-    "commands": "Lista de comandos",
-    "get_premium": "Obter premium"
+    "contact": "Contato",
+    "legal": "Legal",
+    "learn": "Aprender",
+    "terms": "Termos",
+    "privacy": "Privacidade",
+    "commands": "Comandos"
   },
     "metadata": {
     "title": "Sabine | Seu simulador de VALORANT",
@@ -178,5 +172,9 @@
   "privacy": {
     "title": "Política de Privacidade",
     "description": "Last Update: 8/7/2025\n\nEste site não coleta, armazena ou compartilha nenhuma informação pessoal.\nNão utilizamos cookies, ferramentas de rastreamento ou serviços de análise.\nO único propósito deste site é exibir funcionalidades do nosso bot do Discord.\nSe você tiver alguma dúvida sobre esta Política de Privacidade, entre em contato conosco pelo Discord em nosso servidor oficial."
+  },
+  "cards": {
+    "title": "Cartas",
+    "search": "Pesquisar"
   }
 }
