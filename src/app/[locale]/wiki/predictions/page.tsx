@@ -13,7 +13,7 @@ export default async function Predictions() {
         className="flex items-center justify-center pt-10"
       >
         <div
-          className="bg-[#2A2A2A] p-5 rounded-md max-w-xs md:max-w-5xl mb-6 text-3xl"
+          className="bg-[#2A2A2A] p-5 rounded-2xl max-w-xs md:max-w-5xl mb-6 text-3xl"
         >
           <ul className="flex flex-col gap-10">
             <li>

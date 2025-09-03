@@ -13,7 +13,7 @@ export default async function Cards() {
         className="flex items-center justify-center pt-10"
       >
         <div
-          className="bg-[#2A2A2A] p-5 rounded-md max-w-xs md:max-w-5xl mb-6 text-3xl"
+          className="bg-[#2A2A2A] p-5 rounded-2xl max-w-xs md:max-w-5xl mb-6 text-3xl"
         >
           <ul className="flex flex-col gap-10">
             <li>
@@ -53,7 +53,7 @@ export default async function Cards() {
                 }
               >
                 {t.rich("wiki.module.cards.calc.description", {
-                  strong: (chunks) => <span className="font-bold bg-[#1A1A1A] text-[#9CA3AF] rounded-md md:max-w-30">{chunks}</span>
+                  strong: (chunks) => <span className="font-bold bg-[#1A1A1A] text-[#9CA3AF] rounded-2xl md:max-w-30">{chunks}</span>
                 })}
               </p>
             </li>
@@ -74,7 +74,7 @@ export default async function Cards() {
                 id="attributes"
               >
                 {t.rich("wiki.module.cards.attributes.description", {
-                  strong: (chunks) => <span className="font-bold bg-[#1A1A1A] text-[#9CA3AF] rounded-md md:max-w-30">{chunks}</span>
+                  strong: (chunks) => <span className="font-bold bg-[#1A1A1A] text-[#9CA3AF] rounded-2xl md:max-w-30">{chunks}</span>
                 })}
               </p>
             </li>
