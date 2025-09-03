@@ -11,7 +11,7 @@ const players = getPlayers()
 const searchAction = async (formData: FormData) => {
   "use server"
   const q = formData.get("q")?.toString()
-  redirect(!q ? "/cards" : `?q=${encodeURIComponent(q)}`)
+  redirect(!q ? "/cards" : `/cards/?q=${encodeURIComponent(q)}`)
 }
 const ts = Date.now()
 
