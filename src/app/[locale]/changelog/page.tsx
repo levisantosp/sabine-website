@@ -1,16 +1,6 @@
 import { getTranslations } from "next-intl/server"
-import Link from "next/link"
 import UpdateLoading from "../../../components/changelog/UpdateLoading"
 
-type Content = {
-  lang: string
-  text: string
-}
-type Update = {
-  id: string
-  published_at: number
-  content: Content[]
-}
 type Props = {
   params: Promise<{
     locale: string
