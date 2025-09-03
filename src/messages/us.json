@@ -73,8 +73,8 @@
     "promote": {
       "description": "Promote a player to active roster"
     },
-    "ranking": {
-      "description": "Veja o ranking de palpites"
+    "leaderboard": {
+      "description": "Check the leaderboard of predictions, rating, and coins"
     },
     "remove": {
       "description": "Remove a player from active roster"
@@ -93,6 +93,21 @@
     },
     "tournament": {
       "description": "Add and remove tournaments"
+    },
+    "card": {
+      "description": "Check informations about a card"
+    },
+    "claims": {
+      "description": "Check your claims and your pity"
+    },
+    "remind": {
+      "description": "Enable/disable the reminder for when you can use /claim again."
+    },
+    "transactions": {
+      "description": "Check your players transactions"
+    },
+    "trade": {
+      "description": "Trade players with users"
     }
   },
   "footer": {
@@ -101,7 +116,8 @@
     "learn": "Learn",
     "terms": "Terms",
     "privacy": "Privacy",
-    "commands": "Commands"
+    "commands": "Commands",
+    "guidelines": "Guidelines"
   },
   "metadata": {
     "title": "Sabine | Your VALORANT simulator",
@@ -166,6 +182,13 @@
           "title": "Attributes",
           "description": "AIM: <strong>Self-explanatory</strong>\nHS: <strong>Self-explanatory</strong>\nMOV: <strong>Movement</strong>\nAGG: <strong>Aggression</strong>\nACS: <strong>Average Score Combat</strong>\nGMS: <strong>Game Sense</strong>"
         }
+      },
+      "meta": {
+        "title": "Meta Agents",
+        "introduction": {
+          "title": "Introduction to Meta Agents",
+          "description": "Just like in Valorant, each map has its meta agents, and the simulator is no different. Here you can check the meta agents for each map to avoid debuffs on your players."
+        }
       }
     }
   },
@@ -179,5 +202,43 @@
   "cards": {
     "title": "Cards",
     "search": "Search"
+  },
+  "terms": {
+    "title": "Terms of Use",
+    "description": "Last Update: September 2, 2025\n\nWelcome to Sabine, a Discord bot developed for tracking matches, making predictions and providing entertainment related to Valorant and League of Legends. By using our bot, you agree to the following terms.",
+    "acceptance": {
+      "title": "Acceptance",
+      "description": "By using Sabine, you agree to comply with these Terms of Use. If you do not agree with any part, do not use the bot.\n\nViolating these terms will result in your Discord account being suspended from using the bot."
+    },
+    "usage": {
+      "title": "Bot Usage",
+      "description": "<li>The bot is for recreational and entertainment purposes only.</li><li>You agree not to use the bot for illegal or harmful purposes or in violation of Discord rules.</li><li>You are responsible for all actions of your Discord account while using the bot.</li>"
+    },
+    "content": {
+      "title": "Content",
+      "description": "<li>Sabine provides information, statistics, and match results.</li><li>The bot is not responsible for losses or damages resulting from real money bets, predictions, or decisions based on the bot.</li>"
+    },
+    "restrictions": {
+      "title": "Restrictions",
+      "description": "<li>You agree not to modify, copy, or redistribute the bot.</li><li>Premium features may require payment.</li><li>Excessive or abusive use may result in suspension or ban from the bot.</li>"
+    },
+    "privacy": {
+      "title": "Privacy",
+      "description": "<li>The bot collects basic Discord data (username, ID, messages necessary for features).</li><li>Data is used only to provide the bot's functionalities and is not sold to third parties.</li>"
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "description": "<li>The bot is provided “as is”.</li><li>We do not guarantee uninterrupted availability or error-free performance.</li><li>Any decision based on the bot’s information is solely your responsibility.</li>"
+    },
+    "changes": {
+      "title": "Changes",
+      "description": "<li>We may update or modify these terms at any time.</li><li>Continued use of the bot after changes implies acceptance of the new terms.</li>"
+    }
+  },
+  "guidelines": {
+    "title": "Guidelines",
+    "description": "Sabine's goal to bring eSports and entertainment to you and your Discord server. To do this, you must follow some rules to avoid having your account suspended from using the bot.",
+    "subtitle": "The following actions will not be tolerated",
+    "guidelines": "<li>Not following Discord guidelines.</li><li>Exploiting bugs or system glitches.</li><li>Using secondary/alt accounts for personal gain, such as trading players with yourself, playing matches against yourself to climb the leaderboard faster, etc.</li><li>Selling, renting, or trading coins/cards for real money or any item of real-world monetary value. If this happens, report it to our team.</li><li>Attempting to evade or bypass punishments. Evading your suspension (creating or using another account to use Sabine) will result in your suspension not being lifted.</li><li>Attempting to attack, harm, or take down Sabine.</li><li>We are not responsible for accounts that are sold, borrowed, gifted, hacked, etc. The responsibility for what happens with your account lies with you. If someone else uses your account to break the rules, you will be the one banned, since the account belongs to you.</li>"
   }
 }
