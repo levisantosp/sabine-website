@@ -76,6 +76,13 @@ export default async function Footer() {
             >
               {t("footer.commands")}
             </Link>
+            <Link
+              href="/guidelines"
+              target="_blank"
+              className="text-base text-[#9CA3AF] underline"
+            >
+              {t("footer.guidelines")}
+            </Link>
           </div>
           <div
             className="flex flex-col px-4 p-1 md:px-0 md:items-center"
