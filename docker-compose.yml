@@ -4,6 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
     image: sabine-website
+    container_name: sabine-website
     restart: always
     ports:
       - "${PORT}:${PORT}"
