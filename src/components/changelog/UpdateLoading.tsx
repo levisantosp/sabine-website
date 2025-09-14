@@ -9,7 +9,7 @@ type Content = {
 }
 type Update = {
   id: string
-  published_at: number
+  published_at: Date
   content: Content[]
 }
 type Props = {
@@ -48,7 +48,7 @@ export default function UpdateLoading({ locale }: Props) {
         className="flex flex-col items-center justify-center pt-10"
       >
         {
-          updates.sort((a, b) => b.published_at - a.published_at)
+          updates.sort((a, b) => b.published_at.getTime() - a.published_at.getTime())
             .map((update, i) => (
               <Link
                 key={i}
