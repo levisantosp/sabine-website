@@ -10,28 +10,28 @@
     "test": "node --experimental-strip-types --env-file=.env test.ts"
   },
   "dependencies": {
-    "@headlessui/react": "^2.2.7",
-    "@tailwindcss/typography": "^0.5.16",
-    "fastify": "^5.5.0",
+    "@headlessui/react": "^2.2.9",
+    "@tailwindcss/typography": "^0.5.19",
+    "fastify": "^5.6.1",
     "lucide-react": "^0.542.0",
     "next": "15.5.2",
-    "next-intl": "^4.3.5",
-    "players": "github:levisantosp/players",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
+    "next-intl": "^4.3.9",
+    "players": "git+https://github.com/levisantosp/players.git",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "react-icons": "^5.5.0",
     "react-markdown": "^10.1.0",
     "remark": "^15.0.1"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^24",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
+    "@eslint/eslintrc": "^3.3.1",
+    "@tailwindcss/postcss": "^4.1.14",
+    "@types/node": "^24.6.2",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "eslint": "^9.36.0",
     "eslint-config-next": "15.5.2",
-    "tailwindcss": "^4.1.12",
-    "typescript": "^5"
+    "tailwindcss": "^4.1.14",
+    "typescript": "^5.9.3"
   }
 }
