@@ -19,8 +19,8 @@ export default async function Cards({ searchParams }: Props) {
   const t = await getTranslations()
   const q = (await searchParams)?.q?.toLowerCase() ?? ""
   const filtered = players.sort((a, b) => calcPlayerOvr(b) - calcPlayerOvr(a))
-  .map(p => ({ name: `${p.name} — ${p.collection}`, id: p.id, collection: p.collection }))
-  .filter(p => p.name.toLowerCase().includes(q))
+    .map(p => ({ name: `${p.name} — ${p.collection}`, id: p.id, collection: p.collection }))
+    .filter(p => p.name.toLowerCase().includes(q))
   return (
     <>
       <div
