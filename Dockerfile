@@ -1,6 +1,15 @@
-FROM node:lts
+FROM node:lts-alpine
+
+RUN npm i -g pnpm
+
 WORKDIR /app
+
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml /app/
+
+RUN pnpm i --frozen-lockfile
+
 COPY . .
-RUN npm install
-RUN npm run build
-CMD [ "npm", "start" ]
+
+RUN pnpm build
+
+CMD [ "pnpm", "start" ]
