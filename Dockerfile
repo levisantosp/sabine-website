@@ -1,6 +1,7 @@
 FROM node:24.11.0-alpine
 
-RUN npm i -g pnpm
+RUN apk add --no-cache git
+RUN corepack enable pnpm
 
 WORKDIR /app
 
