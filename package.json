@@ -16,7 +16,7 @@
     "lucide-react": "^0.542.0",
     "next": "15.5.2",
     "next-intl": "^4.3.9",
-    "players": "git+https://github.com/levisantosp/players.git",
+    "players": "github:sabinelab/players",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-icons": "^5.5.0",
